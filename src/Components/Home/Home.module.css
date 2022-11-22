@@ -24,6 +24,10 @@
     place-content:center;
     place-items:center;
     gap:3ch;
+    border-radius:2ch;
+padding:2ch;
+/* background: linear-gradient(153deg, rgba(226,135,22,1) 0%, rgba(190,212,38,1) 16%, rgba(40,204,40,1) 32%, rgba(6,185,150,1) 48%, rgba(81,130,189,1) 64%, rgba(162,94,163,1) 81%, rgba(173,29,51,1) 100%); */
+/* background: linear-gradient(153deg, rgba(1,1,1,1) 0%, rgba(79,69,69,1) 16%, rgba(54,71,54,1) 32%, rgba(47,74,70,1) 48%, rgba(38,58,84,1) 64%, rgba(52,18,52,1) 81%, rgba(60,6,14,1) 100%); */
 }
 
 .skillsContainer {
@@ -32,9 +36,15 @@
     grid-template-columns: repeat(3, minmax(min-content,min-content));
     width:100%;
     gap:2ch;
-    place-content:space-between;
+    place-content:space-around;
     place-items:center;
     
+     
+    
+}
+
+.skillsContainer > span {
+    border-radius: 1ch;
 }
 
 .skillLight{
@@ -63,6 +73,8 @@
         grid-template-rows : minmax(5ch,min-content) 1fr 1fr;
         /* grid-template-rows : min-content 1fr 1fr; */
         outline-color:red;
+       
+        
         gap:3%;
         min-height:min-content;
         max-height:100vh;
@@ -73,6 +85,7 @@
     .intro{
         width : 100%;
         text-align:center;
+         
      }
 
     .skillsMainContainer{
@@ -80,34 +93,47 @@
         grid-template-rows: 2ch 1fr;
         place-content:center;
         place-items:center;
-        gap:2ch;
+        gap:1ch;
+        max-width:90vw;
+         margin:-0.3ch;
+       
     }
 
     .skillsContainer {
         /* background-color: aquamarine; */
-        display:grid;
-        /* grid-template-columns: repeat(3, minmax(min-content,min-content)); */
-        grid-template-columns: 1fr 1fr 1fr;
-        width:100%;
-        /* gap:2ch; */
-        place-content:center;
-        place-items:center;
         
+        
+        width:100%;
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        /* gap:0.5ch; */
+        column-gap:1rem;
+        /* height:min-content; */
+        place-content:space-between;
+        place-items:center;
+    
+        
+    }
+
+    .skillsContainer > span {
+        text-align: center;
+        margin:0.3ch;
     }
 
     .skillLight{
 
         background-color:rgba(0,0,0,0.5);
-        border-radius:2px;
+        border-radius:1ch;
          
         padding:0.5ch;
     }
     
     .skillDark {
         background-color:rgba(255,255,255,0.5);
-        border-radius:2px;
+        border-radius:1ch;
          color:black;
-        padding:1ch;
+         padding:0.5ch;
     }
     
 }

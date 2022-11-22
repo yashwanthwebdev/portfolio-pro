@@ -5,11 +5,9 @@ import {AiOutlineMail} from 'react-icons/ai'
 function Contact() { 
   return (
     <div className={style.container}>
-
       <div className={style.mailId}>
       <AiOutlineMail className={style.mailIcon} />  <span>yashwanthsrinivaswebdev@gmail.com</span>
       </div>
-
     </div>
   )
 }
