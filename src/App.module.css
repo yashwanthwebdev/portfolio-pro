@@ -38,7 +38,13 @@
     /* outline:auto red; */
 }
 
-
+.link {
+    transition: transform linear 0.2s
+}
+.link:hover {
+    
+    transform: scale(1.1,1.1);
+}
 
 .buttonLight{
     background-color:rgb(245, 244, 244) ;

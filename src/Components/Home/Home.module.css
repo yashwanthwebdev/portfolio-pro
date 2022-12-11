@@ -13,9 +13,17 @@
 
 }
 
+
+
 .intro{
     width:100%;
     text-align:center;
+     /* font-style: italic; */
+    font-size:1.3rem;
+    text-align:center;
+    letter-spacing: 0.2ch;
+    word-spacing: 1ch;
+ 
 }
 
 .skillsMainContainer{
@@ -28,6 +36,7 @@
 padding:2ch;
 /* background: linear-gradient(153deg, rgba(226,135,22,1) 0%, rgba(190,212,38,1) 16%, rgba(40,204,40,1) 32%, rgba(6,185,150,1) 48%, rgba(81,130,189,1) 64%, rgba(162,94,163,1) 81%, rgba(173,29,51,1) 100%); */
 /* background: linear-gradient(153deg, rgba(1,1,1,1) 0%, rgba(79,69,69,1) 16%, rgba(54,71,54,1) 32%, rgba(47,74,70,1) 48%, rgba(38,58,84,1) 64%, rgba(52,18,52,1) 81%, rgba(60,6,14,1) 100%); */
+/* box-shadow:  0.5ch 1.5ch 2ch rgba(0, 0, 0, 0.4) */
 }
 
 .skillsContainer {

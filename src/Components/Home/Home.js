@@ -12,10 +12,14 @@ function Home() {
     <div className={style.container} >
       
       
-     <p className={style.intro}>Hey, I am Yashwanth with 3 years experience in front-end web development. 
+      <p className={style.intro} style={{
+        color: theme == "light" ? "black" : "white",
+        fontFamily: theme == "light" ? "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" : "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
+      }}>
+        Hey, I am Yashwanth with 3 years experience in front-end web development. 
     
-    <p>
-    I am interested in projects that <span>are creative</span> and <span>are helpful in making our planet a better place for everyone. </span>
+    <p >
+    I am interested in projects that are creative or/and are helpful in helping our planet!
      </p>
     </p>
 
@@ -24,7 +28,7 @@ function Home() {
 style={{background:theme=="light" ? 
 'linear-gradient(153deg, rgba(226,135,22,1) 0%, rgba(190,212,38,1) 16%, rgba(40,204,40,1) 32%, rgba(6,185,150,1) 48%, rgba(81,130,189,1) 64%, rgba(162,94,163,1) 81%, rgba(173,29,51,1) 100%)' :
  'linear-gradient(236deg, rgba(1,1,1,1) 0%, rgba(54,49,49,1) 16%, rgba(98,99,98,1) 32%, rgba(122,135,133,1) 48%, rgba(105,104,104,1) 64%, rgba(55,51,55,1) 81%, rgba(10,10,10,1) 100%)'
-
+, boxShadow: theme=="light" ?  `0.5ch 1.5ch 2ch rgba(0, 0, 0, 0.4)` : `0.5ch 1.5ch 2ch rgb(38, 38, 38,0.8)` 
 }}
 > 
 
