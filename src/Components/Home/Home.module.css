@@ -2,7 +2,7 @@
   display: grid;
   grid-template-rows: minmax(5ch, min-content) repeat(
       auto-fit,
-      minmax(20ch, min-content)
+      minmax(30ch, min-content)
     );
 
   margin-left: auto;

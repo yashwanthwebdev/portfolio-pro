@@ -7,14 +7,19 @@ function Home() {
   const [theme] = useOutletContext();
   const skills = [
     "React",
+    "Redux",
+    "RTK query",
+    "Styled components",
+    "SASS",
+    "Jenkins",
+    "Docker",
+    "Jest/RTL",
     "Javascript",
     "Typescript",
+    "MaterialUI",
     "CSS",
     "Tailwind",
-    "MaterialUI",
-    "Jest/RTL",
     "HTML",
-    "Redux",
     "GitHub",
     "Firebase",
     "Python",
@@ -32,13 +37,14 @@ function Home() {
               ? "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
               : "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
           lineHeight: "3ch",
+          fontFamily: "monospace",
         }}
       >
         Hey, I am Yashwanth with 4 years of experience in frontend web
         development and 1 year of experience in backend development.
       </p>
 
-      <p
+      {/* <p
         className={style.intro}
         style={{
           color: theme == "light" ? "black" : "white",
@@ -51,7 +57,7 @@ function Home() {
       >
         I am interested in projects that are creative or/and are helpful in
         helping our planet!
-      </p>
+      </p> */}
 
       <div
         className={style.skillsMainContainer}
@@ -81,6 +87,7 @@ function Home() {
           {skills.map((element, index) => (
             <span
               className={theme === "dark" ? style.skillLight : style.skillDark}
+              style={{ textAlign: "center" }}
             >
               {element}
             </span>
