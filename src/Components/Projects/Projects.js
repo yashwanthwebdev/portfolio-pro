@@ -107,7 +107,8 @@ function Projects() {
         }}
       >
         <a
-          href="https://vegan-food-recipe.web.app/"
+          // href="https://vegan-food-recipe.web.app/"
+          href="https://veganmealprep.vercel.app/"
           className={style.hrefContainer}
           target="_blank"
           style={{
