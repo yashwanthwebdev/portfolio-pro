@@ -40,8 +40,7 @@ function Home() {
           fontFamily: "monospace",
         }}
       >
-        Hey, I am Yashwanth with 4 years of experience in frontend web
-        development and 1 year of experience in backend development.
+        Hey, I am Yashwanth. I have professional experience in web development.
       </p>
 
       {/* <p
@@ -81,7 +80,7 @@ function Home() {
           }}
         >
           {" "}
-          Skills{" "}
+          My skills{" "}
         </span>
         <div className={style.skillsContainer}>
           {skills.map((element, index) => (

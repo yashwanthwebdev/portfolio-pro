@@ -17,18 +17,24 @@ function Projects() {
     <Grid
       container
       // style={{ width: "100%", margin: "auto" }}
-      spacing={3}
-      rowSpacing={2}
-      columnSpacing={3}
-      style={{ justifyContent: "center" }}
+      // spacing={3}
+      rowSpacing={10}
+      columnSpacing={10}
+      style={{
+        marginTop: "0ch",
+        justifyContent: "center",
+        marginBottom: "4ch",
+        // height: "maxContent",
+      }}
     >
       <Grid
         className={style.projectContainer}
         item
-        md={4}
+        sm={12}
+        md={12}
+        lg={4}
         style={{
           maxHeight: "30ch",
-          margin: "2ch",
         }}
       >
         {/* <a  href="https://football-stats-d45ae.web.app/"  */}
@@ -36,6 +42,8 @@ function Projects() {
           href="https://veganism-chat-bot.vercel.app/"
           className={style.hrefContainer}
           style={{
+            marginLeft: "2ch",
+            marginRight: "2ch",
             backgroundColor:
               theme == "light"
                 ? "rgba(165, 42, 42, 0.5)"
@@ -59,11 +67,13 @@ function Projects() {
       </Grid>
       <Grid
         item
-        md={4}
+        sm={12}
+        md={12}
+        lg={4}
         className={style.projectContainer}
         style={{
           maxHeight: "30ch",
-          margin: "2ch",
+          // height: "30ch",
         }}
       >
         {/* <a  href="https://football-stats-d45ae.web.app/"  */}
@@ -71,6 +81,8 @@ function Projects() {
           href="https://footballstats.vercel.app/"
           className={style.hrefContainer}
           style={{
+            marginLeft: "2ch",
+            marginRight: "2ch",
             backgroundColor:
               theme == "light"
                 ? "rgba(165, 42, 42, 0.5)"
@@ -99,11 +111,13 @@ function Projects() {
 
       <Grid
         item
-        md={4}
+        sm={12}
+        md={12}
+        lg={4}
         className={style.projectContainer}
         style={{
           maxHeight: "30ch",
-          margin: "2ch",
+          // height: "30ch",
         }}
       >
         <a
@@ -112,6 +126,8 @@ function Projects() {
           className={style.hrefContainer}
           target="_blank"
           style={{
+            marginLeft: "2ch",
+            marginRight: "2ch",
             backgroundColor:
               theme == "light"
                 ? "rgba(165, 42, 42, 0.5)"
@@ -140,11 +156,12 @@ function Projects() {
 
       <Grid
         item
-        md={4}
+        sm={12}
+        md={12}
+        lg={4}
         className={style.projectContainer}
         style={{
           maxHeight: "30ch",
-          margin: "2ch",
         }}
       >
         <a
@@ -152,6 +169,8 @@ function Projects() {
           className={style.hrefContainer}
           target="_blank"
           style={{
+            marginLeft: "2ch",
+            marginRight: "2ch",
             backgroundColor:
               theme == "light"
                 ? "rgba(165, 42, 42, 0.5)"
@@ -179,11 +198,12 @@ function Projects() {
 
       <Grid
         item
-        md={4}
+        sm={12}
+        md={12}
+        lg={4}
         className={style.projectContainer}
         style={{
           maxHeight: "30ch",
-          margin: "2ch",
         }}
       >
         <a
@@ -195,7 +215,8 @@ function Projects() {
             justifyContent: "center",
             alignItems: "center",
             maxHeight: "30ch",
-            margin: "2ch",
+            marginLeft: "2ch",
+            marginRight: "2ch",
             backgroundColor:
               theme == "light"
                 ? "rgba(165, 42, 42, 0.5)"
