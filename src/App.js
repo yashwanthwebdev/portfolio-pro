@@ -72,7 +72,10 @@ function App() {
               setTheme("light");
               setBackgroundColor("rgba(123, 32, 146, 0.8)");
               setNavBarBackgroundColor(
-                "linear-gradient(to right, rgba(250, 0, 0, 0.6),white, rgba(250, 0, 0, 0.6))"
+                // "linear-gradient(to right, rgba(250, 0, 0, 0.6),white, rgba(250, 0, 0, 0.6))"
+                // "linear-gradient(to right, rgba(250, 0, 0, 0.6),#DE3163, rgba(250, 0, 0, 0.6))"
+                // "linear-gradient(to right, rgba(250, 0, 0, 0.6), rgba(250,0,0,0.1) , rgba(250, 0, 0, 0.6))"
+                "linear-gradient(to right, rgba(250, 0, 0, 0.6), rgba(255,255,255,0.4) , rgba(250, 0, 0, 0.6))"
               );
               setNavBarColor("rgba(89, 1, 89, 0.87)");
             }}
