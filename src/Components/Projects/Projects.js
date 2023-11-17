@@ -18,7 +18,7 @@ function Projects() {
       container
       // style={{ width: "100%", margin: "auto" }}
       // spacing={3}
-      rowSpacing={10}
+      rowSpacing={4}
       columnSpacing={10}
       style={{
         marginTop: "0ch",
