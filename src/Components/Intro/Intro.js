@@ -21,6 +21,10 @@ function Intro(props) {
       style={{
         height: "100vh",
         scrollSnapAlign: "end",
+        background:
+          props.theme == "light"
+            ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
+            : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
       }}
     >
       <motion.div

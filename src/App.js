@@ -26,12 +26,14 @@ function App() {
     <Stack
       className={style.container}
       // style={{background:theme=="light" ? "radial-gradient(circle,  rgb(128, 0, 96), rgb(255, 153, 230) )" :"radial-gradient(circle, rgb(0, 26, 26),rgb(0, 77, 77))"}}>
-      style={{
-        background:
-          theme == "light"
-            ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
-            : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
-      }}
+      style={
+        {
+          // background:
+          //   theme == "light"
+          //     ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
+          //     : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
+        }
+      }
     >
       <Stack
         direction="row"
