@@ -30,7 +30,7 @@ function Projects(props) {
     <Stack
       // ref={projectsRef}
       style={{
-        height: "100svh",
+        minHeight: "100svh",
         scrollSnapAlign: "end",
         scrollSnapStop: "always",
         background:
