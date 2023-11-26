@@ -30,7 +30,7 @@ function Projects(props) {
     <Stack
       // ref={projectsRef}
       style={{
-        minHeight: "100dvh",
+        height: "100dvh",
         scrollSnapAlign: "end",
         scrollSnapStop: "always",
         background:
@@ -69,7 +69,12 @@ function Projects(props) {
         initial={{ opacity: 0, x: -200 }}
         animate={mainControls}
         transition={{ duration: 1 }}
-        style={{ placeContent: "center", placeItems: "center", height: "100%" }}
+        style={{
+          display: "flex",
+          placeContent: "center",
+          placeItems: "center",
+          height: "100%",
+        }}
       >
         <Grid
           container
@@ -86,7 +91,7 @@ function Projects(props) {
             justifyContent: "center",
             // marginBottom: "4ch",
             placeItems: "center",
-
+            backgroundColor: "yellow",
             // height: "maxContent",
           }}
         >
