@@ -91,7 +91,7 @@ function Projects(props) {
             justifyContent: "center",
             // marginBottom: "4ch",
             placeItems: "center",
-            backgroundColor: "yellow",
+            // backgroundColor: "yellow",
             // height: "maxContent",
           }}
         >
