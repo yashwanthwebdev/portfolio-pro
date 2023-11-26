@@ -39,7 +39,7 @@ function Skills(props) {
   return (
     <Stack
       style={{
-        height: "100dvh",
+        height: "100vh",
         scrollSnapAlign: "start",
         scrollSnapStop: "always",
         // backgroundColor: "yellow",

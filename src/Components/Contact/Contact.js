@@ -24,7 +24,7 @@ function Contact(props) {
   return (
     <Stack
       style={{
-        height: "100dvh",
+        height: "100vh",
         scrollSnapAlign: "end",
         scrollSnapStop: "always",
         background:
