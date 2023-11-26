@@ -42,6 +42,12 @@ function Intro(props) {
               ? // ? "rgb(67, 61, 61)"
                 "rgba(0, 0, 0,0.5)"
               : "rgb(255, 255, 230)",
+          backgroundColor: props.theme === "light" ? "white" : "#8c999a",
+          borderRadius: "0ch 0ch 50% 50%",
+
+          width: "min-content",
+          placeSelf: "center",
+          padding: "1ch",
         }}
       >
         INTRO
