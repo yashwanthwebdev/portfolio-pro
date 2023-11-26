@@ -6,7 +6,7 @@ import veganActivismSimulatorBackgroundImage from "../../Images/claudio-schwarz-
 import todoBackgroundImage from "../../Images/todo.png";
 import imageChatBot from "../../Images/veganism_chat_bot_logo.jpg";
 import { useOutletContext, Link, useNavigate } from "react-router-dom";
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 
 // import { Stack } from "@mui/material";
 import Grid from "@mui/material/Grid";
@@ -39,6 +39,23 @@ function Projects(props) {
             : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
       }}
     >
+      <Typography
+        variant="h5"
+        style={{
+          fontFamily: "monospace",
+          width: "100%",
+          textAlign: "center",
+          fontWeight: "800",
+
+          color:
+            props.theme === "light"
+              ? // ? "rgb(67, 61, 61)"
+                "rgba(0, 0, 0,0.5)"
+              : "rgb(255, 255, 230)",
+        }}
+      >
+        PROJECTS
+      </Typography>
       <motion.div
         variants={{
           hidden: { opacity: 0, x: -200 },
@@ -62,7 +79,7 @@ function Projects(props) {
             // padding: { xs: "0ch", md: "20%" },
             // padding: "10%",
             justifyContent: "center",
-            marginBottom: "4ch",
+            // marginBottom: "4ch",
             placeItems: "center",
 
             // height: "maxContent",

@@ -5,6 +5,8 @@ import Home from "./Components/Home/Home";
 import Projects from "./Components/Projects/Projects";
 import Button from "@mui/material/Button";
 import { Stack, Typography } from "@mui/material";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 function App() {
   const [backgroundColor, setBackgroundColor] = useState(
     "rgba(123, 32, 146, 0.8)"
@@ -35,92 +37,106 @@ function App() {
         }
       }
     >
+      <Typography style={{ color: "black" }}>PORTFOLIO</Typography>
       <Stack
         direction="row"
         justifyContent="end"
         style={{
-          zIndex: "999",
           position: "fixed",
           justifyContent: "end",
           placeSelf: "end",
         }}
       >
-        <Button
-          onClick={() => {
-            console.log("light");
-            setTheme("light");
-            setBackgroundColor("rgba(123, 32, 146, 0.8)");
-            // setNavBarBackgroundColor(
-            //   // "linear-gradient(to right, rgba(250, 0, 0, 0.6),white, rgba(250, 0, 0, 0.6))"
-            //   // "linear-gradient(to right, rgba(250, 0, 0, 0.6),#DE3163, rgba(250, 0, 0, 0.6))"
-            //   // "linear-gradient(to right, rgba(250, 0, 0, 0.6), rgba(250,0,0,0.1) , rgba(250, 0, 0, 0.6))"
-            //   // "linear-gradient(to right, rgba(250, 0, 0, 0.6), rgba(255,255,255,0.4) , rgba(250, 0, 0, 0.6))"
-            //   "linear-gradient(to right, rgba(250, 0, 0, 0.9), rgba(255,0,0,0.3) , rgba(250, 0, 0, 0.9))"
-            // );
-            // setNavBarColor("rgba(89, 1, 89, 0.87)");
-          }}
-          size="small"
+        <Stack
+          direction="column"
           style={{
-            cursor: "pointer",
-            backgroundColor: "rgb(245, 244, 244)",
-            color: "rgb(7, 7, 7)",
-            margin: "0",
-            paddingLeft: "0.4ch",
-            paddingRight: "0.4ch",
-            width: "min-content",
-            height: "min-content",
-            borderRadius: "0.5ch",
-            outline: "none",
-            cursor: "pointer",
+            placeSelf: "end",
+            justifyContent: "end",
           }}
         >
-          <Typography
-            variant="caption"
-            style={{
-              fontWeight: "800",
-              letterSpacing: "0.1ch",
-              fontFamily: "monospace",
+          <Button
+            onClick={() => {
+              console.log("light");
+              setTheme("light");
+              setBackgroundColor("rgba(123, 32, 146, 0.8)");
+              // setNavBarBackgroundColor(
+              //   // "linear-gradient(to right, rgba(250, 0, 0, 0.6),white, rgba(250, 0, 0, 0.6))"
+              //   // "linear-gradient(to right, rgba(250, 0, 0, 0.6),#DE3163, rgba(250, 0, 0, 0.6))"
+              //   // "linear-gradient(to right, rgba(250, 0, 0, 0.6), rgba(250,0,0,0.1) , rgba(250, 0, 0, 0.6))"
+              //   // "linear-gradient(to right, rgba(250, 0, 0, 0.6), rgba(255,255,255,0.4) , rgba(250, 0, 0, 0.6))"
+              //   "linear-gradient(to right, rgba(250, 0, 0, 0.9), rgba(255,0,0,0.3) , rgba(250, 0, 0, 0.9))"
+              // );
+              // setNavBarColor("rgba(89, 1, 89, 0.87)");
             }}
+            size="small"
+            style={{
+              padding: "0ch",
+              cursor: "pointer",
+              backgroundColor: "rgb(245, 244, 244)",
+              color: "rgb(7, 7, 7)",
+              // margin: "0",
+              // paddingLeft: "0.2ch",
+              // paddingRight: "0.2ch",
+              width: "min-content",
+              height: "min-content",
+              borderRadius: "0ch 0ch 0ch 0ch",
+              // outline: "none",
+              cursor: "pointer",
+            }}
+            className={style.buttonLight}
           >
-            light mode
-          </Typography>
-        </Button>
+            <LightModeIcon></LightModeIcon>
+            {/* <Typography
+              variant="caption"
+              style={{
+                fontWeight: "800",
+                letterSpacing: "0.1ch",
+                fontFamily: "monospace",
+              }}
+            >
+              light mode
+            </Typography> */}
+          </Button>
 
-        <Button
-          onClick={() => {
-            setTheme("dark");
-            setBackgroundColor("rgba(12, 12, 12, 1)");
-            setNavBarBackgroundColor(
-              "linear-gradient(to right, rgba(4, 160, 250, 0.6), black, rgba(4, 160, 250, 0.6)"
-            );
-            setNavBarColor("rgba(255, 255, 255,0.87)");
-          }}
-          size="small"
-          style={{
-            cursor: "pointer",
-            backgroundColor: "black",
-            color: "white",
-            margin: "0",
-            paddingLeft: "0.4ch",
-            paddingRight: "0.4ch",
-            width: "min-content",
-            height: "min-content",
-            borderRadius: "0.5ch",
-            outline: "none",
-            cursor: "pointer",
-          }}
-        >
-          <Typography
-            variant="caption"
+          <Button
+            className={style.buttonDark}
+            onClick={() => {
+              setTheme("dark");
+              setBackgroundColor("rgba(12, 12, 12, 1)");
+              setNavBarBackgroundColor(
+                "linear-gradient(to right, rgba(4, 160, 250, 0.6), black, rgba(4, 160, 250, 0.6)"
+              );
+              setNavBarColor("rgba(255, 255, 255,0.87)");
+            }}
+            size="small"
             style={{
-              fontWeight: "800",
-              letterSpacing: "0.1ch",
-              fontFamily: "monospace",
+              padding: "0ch",
+              cursor: "pointer",
+              backgroundColor: "black",
+              color: "white",
+              // margin: "0",
+              // paddingLeft: "0.2ch",
+              // paddingRight: "0.2ch",
+              width: "min-content",
+              height: "min-content",
+              borderRadius: "0.5ch",
+              // outline: "none",
+              cursor: "pointer",
             }}
           >
-            dark mode
-          </Typography>
-        </Button>
+            <DarkModeIcon size="small" style={{ padding: "0ch" }} />
+            {/* <Typography
+              variant="caption"
+              style={{
+                fontWeight: "800",
+                letterSpacing: "0.1ch",
+                fontFamily: "monospace",
+              }}
+            >
+              dark mode
+            </Typography> */}
+          </Button>
+        </Stack>
       </Stack>
       <Home theme={theme} />
     </Stack>

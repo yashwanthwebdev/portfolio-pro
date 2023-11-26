@@ -33,6 +33,23 @@ function Contact(props) {
             : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
       }}
     >
+      <Typography
+        variant="h5"
+        style={{
+          fontFamily: "monospace",
+          width: "100%",
+          textAlign: "center",
+          fontWeight: "800",
+
+          color:
+            props.theme === "light"
+              ? // ? "rgb(67, 61, 61)"
+                "rgba(0, 0, 0,0.5)"
+              : "rgb(255, 255, 230)",
+        }}
+      >
+        INTRO
+      </Typography>
       <motion.div
         ref={contactRef}
         initial={{

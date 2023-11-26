@@ -46,7 +46,7 @@
 }
 
 .buttonLight {
-  background-color: rgb(245, 244, 244);
+  /* background-color: rgb(245, 244, 244);
   color: rgb(7, 7, 7);
   margin: 0;
   padding-left: 0.4ch;
@@ -55,11 +55,17 @@
   height: min-content;
   border-radius: 0.5ch;
   outline: none;
-  cursor: pointer;
+  cursor: pointer; */
+  transition: transform ease-in-out 1s;
+}
+
+.buttonLight:hover {
+  /* filter: saturate(10%); */
+  filter: brightness(90%);
 }
 
 .buttonDark {
-  background-color: black;
+  /* background-color: black;
   color: white;
   margin: 0;
   padding-left: 0.4ch;
@@ -67,8 +73,13 @@
   width: min-content;
   height: min-content;
   border-radius: 0.5ch;
-  outline: none;
-  cursor: pointer;
+  outline: none; */
+  /* cursor: pointer; */
+  transition: transform ease-in-out 1s;
+}
+
+.buttonDark:hover {
+  filter: brightness(200%);
 }
 
 @media only screen and (max-width: 560px) {
