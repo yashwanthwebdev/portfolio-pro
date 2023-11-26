@@ -19,7 +19,7 @@ function Intro(props) {
   return (
     <Stack
       style={{
-        height: "100vh",
+        height: "100svh",
         scrollSnapAlign: "end",
         scrollSnapStop: "always",
 
@@ -32,18 +32,18 @@ function Intro(props) {
       <motion.div
         initial={{
           opacity: 0,
-          y: 300,
+          y: 250,
           fontSize: "0.5rem",
         }}
         variants={{
           hidden: {
             opacity: 0,
-            y: 300,
+            y: 250,
             fontSize: "0.5rem",
           },
           visible: {
             opacity: 1,
-            y: 390,
+            y: 300,
             fontSize: "2rem",
           },
         }}
