@@ -74,6 +74,7 @@ function Projects(props) {
           placeContent: "center",
           placeItems: "center",
           height: "100%",
+          marginBottom: "10ch",
         }}
       >
         <Grid
