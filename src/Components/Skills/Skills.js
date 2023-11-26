@@ -39,17 +39,21 @@ function Skills(props) {
     <Stack style={{ height: "100vh", scrollSnapAlign: "start" }}>
       <motion.div
         variants={{
+          // hidden: { opacity: 0, x: "100%" },
           hidden: { opacity: 0 },
           visible: {
             opacity: [0, 1],
             // rotate: [0, 360],
-            borderRadius: ["50%", "50%"],
-            padding: ["20ch", "10ch"],
+            // borderRadius: ["50%", "50%"],
+            borderRadius: ["2%", "2%"],
+            // padding: ["20ch", "10ch"],
+            padding: ["2ch", "2ch"],
+            // x: [300, 0],
           },
         }}
         animate={mainControls}
         initial={{ opacity: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.5 }}
         // className={style.skillsMainContainer}
         style={{
           margin: "auto",

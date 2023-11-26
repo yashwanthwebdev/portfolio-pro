@@ -42,6 +42,7 @@ function Projects(props) {
         initial={{ opacity: 0, x: -200 }}
         animate={mainControls}
         transition={{ duration: 1 }}
+        style={{ placeContent: "center", placeItems: "center", height: "100%" }}
       >
         <Grid
           container
@@ -51,10 +52,14 @@ function Projects(props) {
           columnSpacing={10}
           style={{
             marginTop: "0ch",
-            padding: "20ch",
+            height: "100%",
+            // padding: "20ch",
+            // padding: { xs: "0ch", md: "20%" },
+            // padding: "10%",
             justifyContent: "center",
             marginBottom: "4ch",
             placeItems: "center",
+
             // height: "maxContent",
           }}
         >
@@ -228,6 +233,7 @@ function Projects(props) {
           </Grid>
 
           <Grid
+            ref={projectsRef}
             item
             sm={12}
             md={12}
@@ -273,7 +279,7 @@ function Projects(props) {
             </a>
           </Grid>
         </Grid>
-        <div ref={projectsRef}></div>
+        {/* <div ref={projectsRef}></div> */}
       </motion.div>
     </Stack>
   );

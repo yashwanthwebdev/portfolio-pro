@@ -44,7 +44,12 @@ function Intro(props) {
         animate={mainControls}
         transition={{ duration: 1 }}
       >
-        <Stack>
+        <Stack
+          style={{
+            placeContent: "center",
+            placeItems: "center",
+          }}
+        >
           <Typography
             sx={{
               color: props.theme == "light" ? "black" : "white",
@@ -56,6 +61,7 @@ function Intro(props) {
               fontFamily: "monospace",
               fontSize: "1.3rem",
               margin: "auto",
+              textAlign: "center",
             }}
           >
             Hey, I am Yashwanth. I have professional experience in web
