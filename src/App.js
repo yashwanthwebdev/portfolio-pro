@@ -37,7 +37,6 @@ function App() {
         }
       }
     >
-      <Typography style={{ color: "black" }}>PORTFOLIO</Typography>
       <Stack
         direction="row"
         justifyContent="end"
