@@ -32,6 +32,7 @@ function Projects(props) {
       style={{
         height: "100vh",
         scrollSnapAlign: "end",
+        scrollSnapStop: "always",
         background:
           props.theme == "light"
             ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"

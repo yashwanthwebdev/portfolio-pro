@@ -40,6 +40,7 @@ function Skills(props) {
       style={{
         height: "100vh",
         scrollSnapAlign: "start",
+        scrollSnapStop: "always",
         // backgroundColor: "yellow",
         background:
           props.theme == "light"
