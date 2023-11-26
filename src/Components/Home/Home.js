@@ -3,32 +3,25 @@ import style from "./Home.module.css";
 import { useOutletContext } from "react-router-dom";
 import { Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
-function Home() {
-  const [theme] = useOutletContext();
-  const skills = [
-    "React",
-    "Redux",
-    "RTK query",
-    "Styled components",
-    "SASS",
-    "Jenkins",
-    "Docker",
-    "Jest/RTL",
-    "Javascript",
-    "Typescript",
-    "MaterialUI",
-    "CSS",
-    "Tailwind",
-    "HTML",
-    "GitHub",
-    "Firebase",
-    "Python",
-    "SQL",
-  ];
+import { motion } from "framer-motion";
+import Intro from "../Intro/Intro";
+import Projects from "../Projects/Projects";
+import Contact from "../Contact/Contact";
+import Skills from "../Skills/Skills";
+
+function Home(props) {
+  // const [theme] = useOutletContext();
+
+  // const theme = "light";
 
   return (
-    <div className={style.container}>
-      <p
+    // <div className={style.container}>
+    <div>
+      <Intro theme={props.theme} />
+      <Skills theme={props.theme} />
+      <Projects theme={props.theme} />
+      <Contact theme={props.theme} />
+      {/* <p
         className={style.intro}
         style={{
           color: theme == "light" ? "black" : "white",
@@ -38,11 +31,12 @@ function Home() {
               : "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
           lineHeight: "3ch",
           fontFamily: "monospace",
+          minHeight: "100vh",
+          marginTop: "50%",
         }}
       >
         Hey, I am Yashwanth. I have professional experience in web development.
-      </p>
-
+      </p> */}
       {/* <p
         className={style.intro}
         style={{
@@ -57,8 +51,15 @@ function Home() {
         I am interested in projects that are creative or/and are helpful in
         helping our planet!
       </p> */}
-
-      <div
+      {/* <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: [0, 1],
+          // rotate: [0, 360],
+          borderRadius: ["50%", "50%"],
+          padding: ["20ch", "10ch"],
+        }}
+        transition={{ duration: 1 }}
         className={style.skillsMainContainer}
         style={{
           background:
@@ -91,73 +92,8 @@ function Home() {
               {element}
             </span>
           ))}
-          {/* <span
-            className={theme == "dark" ? style.skillLight : style.skillDark}
-          >
-            React
-          </span>
-          <span
-            className={theme == "dark" ? style.skillLight : style.skillDark}
-          >
-            Javascript
-          </span>
-          <span
-            className={theme == "dark" ? style.skillLight : style.skillDark}
-          >
-            Typescript
-          </span>
-          <span
-            className={theme == "dark" ? style.skillLight : style.skillDark}
-          >
-            CSS
-          </span>
-          <span
-            className={theme == "dark" ? style.skillLight : style.skillDark}
-          >
-            Tailwind
-          </span>
-          <span
-            className={theme == "dark" ? style.skillLight : style.skillDark}
-          >
-            MaterialUI
-          </span>
-          <span
-            className={theme == "dark" ? style.skillLight : style.skillDark}
-          >
-            Jest/RTL
-          </span>
-          <span
-            className={theme == "dark" ? style.skillLight : style.skillDark}
-          >
-            HTML
-          </span>
-          <span
-            className={theme == "dark" ? style.skillLight : style.skillDark}
-          >
-            Redux
-          </span>
-          <span
-            className={theme == "dark" ? style.skillLight : style.skillDark}
-          >
-            GitHub
-          </span>
-          <span
-            className={theme == "dark" ? style.skillLight : style.skillDark}
-          >
-            Firebase
-          </span>
-          <span
-            className={theme == "dark" ? style.skillLight : style.skillDark}
-          >
-            Python
-          </span>
-          <span
-            className={theme == "dark" ? style.skillLight : style.skillDark}
-          >
-            SQL
-          </span> */}
         </div>
-      </div>
+      </motion.div> */}
     </div>
   );
 }
