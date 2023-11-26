@@ -50,7 +50,7 @@ function Intro(props) {
           padding: "1ch",
         }}
       >
-        INTRO {new Date().getTime()}
+        INTRO {new Date().toLocaleString()}
       </Typography>
       <motion.div
         initial={{
