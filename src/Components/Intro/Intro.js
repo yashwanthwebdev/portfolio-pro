@@ -19,7 +19,7 @@ function Intro(props) {
   return (
     <Stack
       style={{
-        height: "100svh",
+        height: "100lvh",
         scrollSnapAlign: "end",
         scrollSnapStop: "always",
 
