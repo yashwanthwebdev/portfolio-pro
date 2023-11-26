@@ -50,7 +50,7 @@ function Intro(props) {
           padding: "1ch",
         }}
       >
-        INTRO
+        INTRO 9
       </Typography>
       <motion.div
         initial={{
