@@ -28,15 +28,7 @@ function Intro(props) {
         backgroundImage: `url(${plants_1})`,
         backgroundSize: "cover",
         overflowX: "hidden",
-
-        // background:
-        //   props.theme == "light"
-        //     ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
-        //     : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
-        // background:
-        //   props.theme == "light"
-        //     ? "white"
-        //     : "black",
+        alignItems: "center",
       }}
     >
       <Typography
@@ -54,7 +46,6 @@ function Intro(props) {
               : "rgba(0, 0, 0,0.5)",
           backgroundColor:
             props.theme === "light" ? "rgba(0,0,0,0.8)" : "white",
-          // borderRadius: "0ch 0ch 50% 50%",
           width: "100%",
           placeSelf: "center",
           padding: "1ch",
@@ -65,24 +56,32 @@ function Intro(props) {
       <motion.div
         initial={{
           opacity: 0,
-          y: 250,
+          x: -200,
+          y: 200,
           fontSize: "0.5rem",
         }}
         variants={{
           hidden: {
             opacity: 0,
-            y: 250,
+            x: -200,
+            y: 200,
+
             fontSize: "0.5rem",
           },
           visible: {
             opacity: 1,
-            y: 300,
+            x: 100,
+            y: 250,
+
             fontSize: "2rem",
           },
         }}
         animate={mainControls}
         transition={{ duration: 1 }}
-        style={{ backgroundColor: "yellow", width: "50%" }}
+        style={{
+          placeSelf: "start",
+          width: "50%",
+        }}
       >
         <Stack
           style={{

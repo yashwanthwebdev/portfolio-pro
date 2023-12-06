@@ -7,8 +7,8 @@ import todoBackgroundImage from "../../Images/todo.png";
 import imageChatBot from "../../Images/veganism_chat_bot_logo.jpg";
 import { useOutletContext, Link, useNavigate } from "react-router-dom";
 import { Stack, Typography } from "@mui/material";
-import pineapple from "../../Images/portfolio/pineapple.jpg" 
-
+import pineapple from "../../Images/portfolio/pineapple.jpg";
+import plants_2 from "../../Images/portfolio/plants_2.jpg";
 
 // import { Stack } from "@mui/material";
 import Grid from "@mui/material/Grid";
@@ -19,8 +19,7 @@ function Projects(props) {
   const projectsRef = useRef(null);
   const isInView = useInView(projectsRef, { once: false });
   const mainControls = useAnimation();
-  const projectContainerBackgroundColor = "rgba(0,0,0,0.7)"
-
+  const projectContainerBackgroundColor = "rgba(0,0,0,0.7)";
 
   useEffect(() => {
     if (isInView) {
@@ -41,12 +40,10 @@ function Projects(props) {
         //   props.theme == "light"
         //     ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
         //     : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
-        background:
-        props.theme == "light"
-          ? "white"
-          : "black",
-          backgroundImage: `url(${pineapple})`,
-          backgroundSize : "cover"
+        background: props.theme == "light" ? "white" : "black",
+        // backgroundImage: `url(${pineapple})`,
+        backgroundImage: `url(${plants_2})`,
+        backgroundSize: "cover",
       }}
     >
       <Typography
@@ -68,12 +65,10 @@ function Projects(props) {
           color:
             props.theme === "light"
               ? // ? "rgb(67, 61, 61)"
-              "rgb(255, 255, 230)"
-              :  "rgba(0, 0, 0,0.5)",
-              backgroundColor: props.theme === "light" ? 
-          "rgba(0,0,0,0.8)"
-          :
-          "white",
+                "rgb(255, 255, 230)"
+              : "rgba(0, 0, 0,0.5)",
+          backgroundColor:
+            props.theme === "light" ? "rgba(0,0,0,0.8)" : "white",
           // borderRadius: "0ch 0ch 50% 50%",
           width: "100%",
           placeSelf: "center",
@@ -174,7 +169,7 @@ function Projects(props) {
               style={{
                 marginLeft: "2ch",
                 marginRight: "2ch",
-                 backgroundColor: projectContainerBackgroundColor,
+                backgroundColor: projectContainerBackgroundColor,
                 // backgroundColor:
                 //   props.theme == "light"
                 //     ? "rgba(165, 42, 42, 0.5)"
@@ -264,7 +259,7 @@ function Projects(props) {
               style={{
                 marginLeft: "2ch",
                 marginRight: "2ch",
-                backgroundColor : projectContainerBackgroundColor,
+                backgroundColor: projectContainerBackgroundColor,
                 // backgroundColor:
                 //   props.theme == "light"
                 //     ? "rgba(165, 42, 42, 0.5)"

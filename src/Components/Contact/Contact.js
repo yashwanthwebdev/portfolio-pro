@@ -5,8 +5,7 @@ import { useOutletContext } from "react-router-dom";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Typography } from "@mui/material";
 import Stack from "@mui/material/Stack";
-import feather from "../../Images/portfolio/feather.jpg" 
-
+import feather from "../../Images/portfolio/feather.jpg";
 
 function Contact(props) {
   // const [theme] = useOutletContext();
@@ -33,12 +32,9 @@ function Contact(props) {
         //   props.theme == "light"
         //     ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
         //     : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
-        background:
-          props.theme == "light"
-            ? "white"
-            : "black",
-            backgroundImage: `url(${feather})`,
-            backgroundSize : "cover"
+        background: props.theme == "light" ? "white" : "black",
+        backgroundImage: `url(${feather})`,
+        backgroundSize: "cover",
       }}
     >
       <Typography
@@ -60,12 +56,10 @@ function Contact(props) {
           color:
             props.theme === "light"
               ? // ? "rgb(67, 61, 61)"
-              "rgb(255, 255, 230)"
-              :  "rgba(0, 0, 0,0.5)",
-              backgroundColor: props.theme === "light" ? 
-          "rgba(0,0,0,0.8)"
-          :
-          "white",
+                "rgb(255, 255, 230)"
+              : "rgba(0, 0, 0,0.5)",
+          backgroundColor:
+            props.theme === "light" ? "rgba(0,0,0,0.8)" : "white",
           // borderRadius: "0ch 0ch 50% 50%",
           width: "100%",
           placeSelf: "center",
@@ -78,16 +72,16 @@ function Contact(props) {
         ref={contactRef}
         initial={{
           opacity: 0,
-          y: 300,
+          y: 200,
         }}
         variants={{
           hidden: {
             opacity: 0,
-            y: 300,
+            y: 200,
           },
           visible: {
             opacity: 1,
-            y: 390,
+            y: 300,
           },
         }}
         animate={mainControls}
@@ -103,7 +97,7 @@ function Contact(props) {
           <Stack
             className={style.mailId}
             direction="row"
-            style={{ margin: "auto",  alignItems:"center" }}
+            style={{ margin: "auto", alignItems: "center" }}
           >
             <AiOutlineMail
               className={style.mailIcon}
@@ -113,10 +107,9 @@ function Contact(props) {
               }}
             />{" "}
             <Typography
-            variant="h5"
-            
+              variant="h5"
               style={{
-                color : "black",
+                color: "black",
                 // color: theme == "light" ? "black" : "white",
                 fontWeight: "600",
               }}
