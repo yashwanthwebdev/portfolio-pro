@@ -325,9 +325,9 @@ function Projects(props) {
               />
 
               <div className={style.projectDetailsContainer}>
-                <span className={style.title}>Todo app</span>
+                <span className={style.title}>To-do app</span>
                 <span className={style.description}>
-                  A simple app that helps to manage your todos!
+                  A simple app that helps to manage your to-dos!
                 </span>
               </div>
             </a>
