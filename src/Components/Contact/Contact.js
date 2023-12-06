@@ -5,6 +5,8 @@ import { useOutletContext } from "react-router-dom";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Typography } from "@mui/material";
 import Stack from "@mui/material/Stack";
+import feather from "../../Images/portfolio/feather.jpg" 
+
 
 function Contact(props) {
   // const [theme] = useOutletContext();
@@ -27,10 +29,16 @@ function Contact(props) {
         height: "100vh",
         scrollSnapAlign: "end",
         scrollSnapStop: "always",
+        // background:
+        //   props.theme == "light"
+        //     ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
+        //     : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
         background:
           props.theme == "light"
-            ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
-            : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
+            ? "white"
+            : "black",
+            backgroundImage: `url(${feather})`,
+            backgroundSize : "cover"
       }}
     >
       <Typography
@@ -41,14 +49,25 @@ function Contact(props) {
           textAlign: "center",
           fontWeight: "800",
 
+          // color:
+          //   props.theme === "light"
+          //     ? // ? "rgb(67, 61, 61)"
+          //       "rgba(0, 0, 0,0.5)"
+          //     : "rgb(255, 255, 230)",
+          // backgroundColor: props.theme === "light" ? "white" : "#8c999a",
+          // borderRadius: "0ch 0ch 50% 50%",
+          width: "min-content",
           color:
             props.theme === "light"
               ? // ? "rgb(67, 61, 61)"
-                "rgba(0, 0, 0,0.5)"
-              : "rgb(255, 255, 230)",
-          backgroundColor: props.theme === "light" ? "white" : "#8c999a",
-          borderRadius: "0ch 0ch 50% 50%",
-          width: "min-content",
+              "rgb(255, 255, 230)"
+              :  "rgba(0, 0, 0,0.5)",
+              backgroundColor: props.theme === "light" ? 
+          "rgba(0,0,0,0.8)"
+          :
+          "white",
+          // borderRadius: "0ch 0ch 50% 50%",
+          width: "100%",
           placeSelf: "center",
           padding: "1ch",
         }}
@@ -84,7 +103,7 @@ function Contact(props) {
           <Stack
             className={style.mailId}
             direction="row"
-            style={{ margin: "auto" }}
+            style={{ margin: "auto",  alignItems:"center" }}
           >
             <AiOutlineMail
               className={style.mailIcon}
@@ -93,14 +112,17 @@ function Contact(props) {
                 fontWeight: "600",
               }}
             />{" "}
-            <span
+            <Typography
+            variant="h5"
+            
               style={{
-                color: theme == "light" ? "black" : "white",
+                color : "black",
+                // color: theme == "light" ? "black" : "white",
                 fontWeight: "600",
               }}
             >
               yashwanthsrinivaswebdev@gmail.com
-            </span>
+            </Typography>
           </Stack>
         </Stack>
       </motion.div>

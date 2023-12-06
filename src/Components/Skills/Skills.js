@@ -3,6 +3,8 @@ import { motion, useInView, useAnimation } from "framer-motion";
 import style from "./Skills.module.css";
 import { Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
+import plantsAndLeaves from "../../Images/portfolio/pensAndLeaves.jpg";
+import plants_3 from "../../Images/portfolio/plants_3.jpg";
 
 function Skills(props) {
   const skillsRef = useRef(null);
@@ -43,10 +45,14 @@ function Skills(props) {
         scrollSnapAlign: "start",
         scrollSnapStop: "always",
         // backgroundColor: "yellow",
-        background:
-          props.theme == "light"
-            ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
-            : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
+        // background:
+        //   props.theme == "light"
+        //     ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
+        //     : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
+        background: props.theme == "light" ? "white" : "black",
+        // backgroundImage: `url(${plantsAndLeaves})`,
+        backgroundImage: `url(${plants_3})`,
+        backgroundSize: "cover",
       }}
     >
       <Typography
@@ -57,14 +63,21 @@ function Skills(props) {
           textAlign: "center",
           fontWeight: "800",
 
+          // color:
+          //   props.theme === "light"
+          //     ? // ? "rgb(67, 61, 61)"
+          //       "rgba(0, 0, 0,0.5)"
+          //     : "rgb(255, 255, 230)",
           color:
             props.theme === "light"
               ? // ? "rgb(67, 61, 61)"
-                "rgba(0, 0, 0,0.5)"
-              : "rgb(255, 255, 230)",
-          backgroundColor: props.theme === "light" ? "white" : "#8c999a",
-          borderRadius: "0ch 0ch 50% 50%",
-          width: "min-content",
+                "rgb(255, 255, 230)"
+              : "rgba(0, 0, 0,0.5)",
+          backgroundColor:
+            props.theme === "light" ? "rgba(0,0,0,0.8)" : "white",
+          // borderRadius: "0ch 0ch 50% 50%",
+          width: "100%",
+          // width: "min-content",
           placeSelf: "center",
           padding: "1ch",
         }}
@@ -82,7 +95,7 @@ function Skills(props) {
             borderRadius: ["2%", "2%"],
             // padding: ["20ch", "10ch"],
             padding: ["2ch", "2ch"],
-            // x: [300, 0],
+            x: [800, 320],
           },
         }}
         animate={mainControls}
@@ -91,18 +104,25 @@ function Skills(props) {
         // className={style.skillsMainContainer}
         style={{
           margin: "auto",
+          background: "#DAD299",
+          background: "-webkit-linear-gradient(to right, #B0DAB9, #DAD299)",
+          background: "linear-gradient(to right, #B0DAB9, #DAD299)",
+
+          background: "#73C8A9" /* fallback for old browsers */,
           background:
-            props.theme == "light"
-              ? "linear-gradient(153deg, rgba(226,135,22,1) 0%, rgba(190,212,38,1) 16%, rgba(40,204,40,1) 32%, rgba(6,185,150,1) 48%, rgba(81,130,189,1) 64%, rgba(162,94,163,1) 81%, rgba(173,29,51,1) 100%)"
-              : "linear-gradient(236deg, rgba(1,1,1,1) 0%, rgba(54,49,49,1) 16%, rgba(98,99,98,1) 32%, rgba(122,135,133,1) 48%, rgba(105,104,104,1) 64%, rgba(55,51,55,1) 81%, rgba(10,10,10,1) 100%)",
+            "-webkit-linear-gradient(to right, #373B44, #73C8A9)" /* Chrome 10-25, Safari 5.1-6 */,
+          background:
+            "linear-gradient(to right, #373B44, #73C8A9)" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
+
           boxShadow:
             props.theme == "light"
               ? `0.5ch 1.5ch 2ch rgba(0, 0, 0, 0.4)`
               : `0.5ch 1.5ch 2ch rgb(38, 38, 38,0.8)`,
+          width: "50%",
         }}
       >
         <Stack style={{ justifyContent: "center" }}>
-          <span
+          {/* <span
             style={{
               fontSize: "1.3rem",
               fontWeight: "700",
@@ -118,7 +138,7 @@ function Skills(props) {
           >
             {" "}
             My skills{" "}
-          </span>
+          </span> */}
         </Stack>
         <div className={style.skillsContainer}>
           {skills.map((element, index) => (

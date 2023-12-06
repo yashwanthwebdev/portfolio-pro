@@ -39,14 +39,14 @@ function App() {
     >
       <Stack
         direction="row"
-        justifyContent="end"
+        justifyContent="end"  
         style={{
           position: "fixed",
           justifyContent: "end",
           placeSelf: "end",
         }}
       >
-        <Stack
+        {/* <Stack
           direction="column"
           style={{
             placeSelf: "end",
@@ -59,11 +59,7 @@ function App() {
               setTheme("light");
               setBackgroundColor("rgba(123, 32, 146, 0.8)");
               // setNavBarBackgroundColor(
-              //   // "linear-gradient(to right, rgba(250, 0, 0, 0.6),white, rgba(250, 0, 0, 0.6))"
-              //   // "linear-gradient(to right, rgba(250, 0, 0, 0.6),#DE3163, rgba(250, 0, 0, 0.6))"
-              //   // "linear-gradient(to right, rgba(250, 0, 0, 0.6), rgba(250,0,0,0.1) , rgba(250, 0, 0, 0.6))"
-              //   // "linear-gradient(to right, rgba(250, 0, 0, 0.6), rgba(255,255,255,0.4) , rgba(250, 0, 0, 0.6))"
-              //   "linear-gradient(to right, rgba(250, 0, 0, 0.9), rgba(255,0,0,0.3) , rgba(250, 0, 0, 0.9))"
+                  //   "linear-gradient(to right, rgba(250, 0, 0, 0.9), rgba(255,0,0,0.3) , rgba(250, 0, 0, 0.9))"
               // );
               // setNavBarColor("rgba(89, 1, 89, 0.87)");
             }}
@@ -73,9 +69,6 @@ function App() {
               cursor: "pointer",
               backgroundColor: "rgb(245, 244, 244)",
               color: "rgb(7, 7, 7)",
-              // margin: "0",
-              // paddingLeft: "0.2ch",
-              // paddingRight: "0.2ch",
               width: "min-content",
               height: "min-content",
               borderRadius: "0ch 0ch 0ch 0ch",
@@ -85,16 +78,7 @@ function App() {
             className={style.buttonLight}
           >
             <LightModeIcon></LightModeIcon>
-            {/* <Typography
-              variant="caption"
-              style={{
-                fontWeight: "800",
-                letterSpacing: "0.1ch",
-                fontFamily: "monospace",
-              }}
-            >
-              light mode
-            </Typography> */}
+            
           </Button>
 
           <Button
@@ -124,18 +108,9 @@ function App() {
             }}
           >
             <DarkModeIcon size="small" style={{ padding: "0ch" }} />
-            {/* <Typography
-              variant="caption"
-              style={{
-                fontWeight: "800",
-                letterSpacing: "0.1ch",
-                fontFamily: "monospace",
-              }}
-            >
-              dark mode
-            </Typography> */}
+             
           </Button>
-        </Stack>
+        </Stack> */}
       </Stack>
       <Home theme={theme} />
     </Stack>

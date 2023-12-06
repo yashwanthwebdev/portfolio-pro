@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from "react";
 import { Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { motion, useInView, useAnimation } from "framer-motion";
+import notepad_1 from "../../Images/portfolio/notepad_1.jpg";
+import plants_1 from "../../Images/portfolio/plants_1.jpg";
 
 function Intro(props) {
   // const theme = "light";
@@ -22,11 +24,19 @@ function Intro(props) {
         height: "100vh",
         scrollSnapAlign: "end",
         scrollSnapStop: "always",
+        // backgroundImage:`url(${introBackground})`,
+        backgroundImage: `url(${plants_1})`,
+        backgroundSize: "cover",
+        overflowX: "hidden",
 
-        background:
-          props.theme == "light"
-            ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
-            : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
+        // background:
+        //   props.theme == "light"
+        //     ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
+        //     : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
+        // background:
+        //   props.theme == "light"
+        //     ? "white"
+        //     : "black",
       }}
     >
       <Typography
@@ -36,16 +46,16 @@ function Intro(props) {
           width: "100%",
           textAlign: "center",
           fontWeight: "800",
-
+          width: "100%",
           color:
             props.theme === "light"
               ? // ? "rgb(67, 61, 61)"
-                "rgba(0, 0, 0,0.5)"
-              : "rgb(255, 255, 230)",
-          backgroundColor: props.theme === "light" ? "white" : "#8c999a",
-          borderRadius: "0ch 0ch 50% 50%",
-
-          width: "min-content",
+                "rgb(255, 255, 230)"
+              : "rgba(0, 0, 0,0.5)",
+          backgroundColor:
+            props.theme === "light" ? "rgba(0,0,0,0.8)" : "white",
+          // borderRadius: "0ch 0ch 50% 50%",
+          width: "100%",
           placeSelf: "center",
           padding: "1ch",
         }}
@@ -72,6 +82,7 @@ function Intro(props) {
         }}
         animate={mainControls}
         transition={{ duration: 1 }}
+        style={{ backgroundColor: "yellow", width: "50%" }}
       >
         <Stack
           style={{

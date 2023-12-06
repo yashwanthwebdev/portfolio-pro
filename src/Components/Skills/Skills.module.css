@@ -5,6 +5,8 @@
   gap: 2ch;
   place-content: space-around;
   place-items: center;
+  padding: 2ch;
+  height: max-content;
 }
 
 .skillsContainer > span {
