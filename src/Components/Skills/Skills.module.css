@@ -1,12 +1,62 @@
 .skillsContainer {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(min-content, min-content));
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   gap: 2ch;
   place-content: space-around;
   place-items: center;
-  padding: 2ch;
   height: max-content;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  /* gap: 1ch; */
+  place-content: center;
+  place-items: center;
+  /* padding: 1ch; */
+  height: max-content;
+  column-gap: 2ch;
+  row-gap: 3ch;
+}
+
+.motionContainer {
+  /* width: 25ch; */
+  width: 40ch;
+  padding-top: 2ch;
+  padding-bottom: 2ch;
+  backdrop-filter: blur(10px);
+  padding-left: 10ch;
+  padding-right: 10ch;
+  height: 30ch;
+  width: 50%;
+  backdrop-filter: blur(10px);
+}
+
+@media screen and (max-width: 600px) {
+  .skillsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    /* gap: 1ch; */
+    place-content: center;
+    place-items: center;
+
+    /* padding: 1ch; */
+    height: max-content;
+    column-gap: 2ch;
+    row-gap: 3ch;
+  }
+
+  .motionContainer {
+    height: 30ch;
+    width: 90%;
+    backdrop-filter: blur(10px);
+    padding-left: 0ch;
+    padding-right: 0ch;
+  }
 }
 
 .skillsContainer > span {
@@ -14,17 +64,20 @@
 }
 
 .skillLight {
-  background-color: rgba(255, 255, 255, 0.5);
+  /* background-color: rgba(255, 255, 255, 0.5); */
   border-radius: 2px;
   color: black;
+  /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white; */
+  /* font-weight: 800; */
 
-  padding: 1ch;
+  /* padding: 1ch; */
 }
 
 .skillDark {
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   border-radius: 2px;
   color: white;
 
-  padding: 1ch;
+  /* padding: 1ch; */
 }

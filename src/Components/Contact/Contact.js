@@ -6,6 +6,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { Typography } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import feather from "../../Images/portfolio/feather.jpg";
+import rose from "../../Images/portfolio/rose_mobile.jpg";
 
 function Contact(props) {
   // const [theme] = useOutletContext();
@@ -24,6 +25,12 @@ function Contact(props) {
 
   return (
     <Stack
+      sx={{
+        backgroundImage: {
+          xs: `url(${rose})`,
+          md: `url(${feather})`,
+        },
+      }}
       style={{
         height: "100vh",
         scrollSnapAlign: "end",
@@ -32,8 +39,7 @@ function Contact(props) {
         //   props.theme == "light"
         //     ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
         //     : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
-        background: props.theme == "light" ? "white" : "black",
-        backgroundImage: `url(${feather})`,
+        // background: props.theme == "light" ? "white" : "black",
         backgroundSize: "cover",
       }}
     >
@@ -81,7 +87,7 @@ function Contact(props) {
           },
           visible: {
             opacity: 1,
-            y: 300,
+            y: 250,
           },
         }}
         animate={mainControls}
@@ -107,11 +113,18 @@ function Contact(props) {
               }}
             />{" "}
             <Typography
-              variant="h5"
+              variant="body2"
               style={{
                 color: "black",
                 // color: theme == "light" ? "black" : "white",
                 fontWeight: "600",
+                backdropFilter: "blur(10px)",
+              }}
+              sx={{
+                fontSize: {
+                  xs: "1rem",
+                  lg: "1.3rem",
+                },
               }}
             >
               yashwanthsrinivaswebdev@gmail.com

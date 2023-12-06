@@ -9,6 +9,8 @@ import { useOutletContext, Link, useNavigate } from "react-router-dom";
 import { Stack, Typography } from "@mui/material";
 import pineapple from "../../Images/portfolio/pineapple.jpg";
 import plants_2 from "../../Images/portfolio/plants_2.jpg";
+import hanging_flowers_mobile from "../../Images/portfolio/hanging_flowers_mobile.jpg";
+import planton_mobile from "../../Images/portfolio/planton_mobile.jpg";
 
 // import { Stack } from "@mui/material";
 import Grid from "@mui/material/Grid";
@@ -32,6 +34,12 @@ function Projects(props) {
   return (
     <Stack
       // ref={projectsRef}
+      sx={{
+        backgroundImage: {
+          xs: `url(${planton_mobile})`,
+          md: `url(${plants_2})`,
+        },
+      }}
       style={{
         height: "100vh",
         scrollSnapAlign: "end",
@@ -40,9 +48,8 @@ function Projects(props) {
         //   props.theme == "light"
         //     ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
         //     : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
-        background: props.theme == "light" ? "white" : "black",
+        // background: props.theme == "light" ? "white" : "black",
         // backgroundImage: `url(${pineapple})`,
-        backgroundImage: `url(${plants_2})`,
         backgroundSize: "cover",
       }}
     >
@@ -79,10 +86,10 @@ function Projects(props) {
       </Typography>
       <motion.div
         variants={{
-          hidden: { opacity: 0, x: -200 },
-          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
         }}
-        initial={{ opacity: 0, x: -200 }}
+        initial={{ opacity: 0 }}
         animate={mainControls}
         transition={{ duration: 1 }}
         style={{
@@ -90,16 +97,26 @@ function Projects(props) {
           placeContent: "center",
           placeItems: "center",
           height: "100%",
-          marginBottom: "10ch",
+          // marginBottom: "10ch",
         }}
       >
         <Grid
           container
           // style={{ width: "100%", margin: "auto" }}
           // spacing={3}
-          rowSpacing={4}
-          columnSpacing={10}
+          rowSpacing={1}
+          // columnSpacing={10}
+          sx={
+            {
+              // backdropFilter: {
+              //   xs: "blur(10px)",
+              //   lg: "none",
+              // },
+            }
+          }
           style={{
+            // backdropFilter: " blur(10px)",
+
             marginTop: "0ch",
             height: "100%",
             // padding: "20ch",

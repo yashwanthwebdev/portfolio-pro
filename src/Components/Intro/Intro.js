@@ -4,6 +4,8 @@ import Typography from "@mui/material/Typography";
 import { motion, useInView, useAnimation } from "framer-motion";
 import notepad_1 from "../../Images/portfolio/notepad_1.jpg";
 import plants_1 from "../../Images/portfolio/plants_1.jpg";
+import abstract_mobile from "../../Images/portfolio/abstract_mobile.jpg";
+import style from "./Intro.module.css";
 
 function Intro(props) {
   // const theme = "light";
@@ -24,11 +26,13 @@ function Intro(props) {
         height: "100vh",
         scrollSnapAlign: "end",
         scrollSnapStop: "always",
-        // backgroundImage:`url(${introBackground})`,
-        backgroundImage: `url(${plants_1})`,
         backgroundSize: "cover",
-        overflowX: "hidden",
-        alignItems: "center",
+      }}
+      sx={{
+        backgroundImage: {
+          xs: `url(${abstract_mobile})`,
+          md: `url(${plants_1})`,
+        },
       }}
     >
       <Typography
@@ -56,31 +60,38 @@ function Intro(props) {
       <motion.div
         initial={{
           opacity: 0,
-          x: -200,
-          y: 200,
+          // x: -200,
+          // y: 200,
           fontSize: "0.5rem",
         }}
         variants={{
           hidden: {
             opacity: 0,
-            x: -200,
-            y: 200,
-
+            // x: -200,
+            // y: 200,
             fontSize: "0.5rem",
           },
           visible: {
             opacity: 1,
-            x: 100,
-            y: 250,
-
+            // x: 100,
+            // y: 250,
             fontSize: "2rem",
           },
         }}
         animate={mainControls}
         transition={{ duration: 1 }}
         style={{
-          placeSelf: "start",
-          width: "50%",
+          display: "flex",
+          flexDirection: "column",
+          placeSelf: "center",
+          justifyContent: "center",
+          height: "100%",
+        }}
+        sx={{
+          width: {
+            xs: "70%",
+            lg: "50%",
+          },
         }}
       >
         <Stack
@@ -101,6 +112,9 @@ function Intro(props) {
               fontSize: "1.3rem",
               margin: "auto",
               textAlign: "center",
+            }}
+            style={{
+              backdropFilter: "blur(10px)",
             }}
           >
             Hey, I am Yashwanth. I have professional experience in web

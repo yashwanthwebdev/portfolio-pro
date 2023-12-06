@@ -44,13 +44,7 @@ function Skills(props) {
         height: "100vh",
         scrollSnapAlign: "start",
         scrollSnapStop: "always",
-        // backgroundColor: "yellow",
-        // background:
-        //   props.theme == "light"
-        //     ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
-        //     : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
         background: props.theme == "light" ? "white" : "black",
-        // backgroundImage: `url(${plantsAndLeaves})`,
         backgroundImage: `url(${plants_3})`,
         backgroundSize: "cover",
       }}
@@ -85,6 +79,7 @@ function Skills(props) {
         SKILLS
       </Typography>
       <motion.div
+        className={style.motionContainer}
         variants={{
           // hidden: { opacity: 0, x: "100%" },
           hidden: { opacity: 0 },
@@ -94,55 +89,53 @@ function Skills(props) {
             // borderRadius: ["50%", "50%"],
             borderRadius: ["2%", "2%"],
             // padding: ["20ch", "10ch"],
-            padding: ["2ch", "2ch"],
-            x: [800, 320],
+            // padding: ["2ch", "2ch"],
+            // x: [800, 320],
           },
         }}
         animate={mainControls}
         initial={{ opacity: 0 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1 }}
         // className={style.skillsMainContainer}
+        sx={{}}
         style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          // outline: "2px red solid",
           margin: "auto",
-          background: "#DAD299",
-          background: "-webkit-linear-gradient(to right, #B0DAB9, #DAD299)",
-          background: "linear-gradient(to right, #B0DAB9, #DAD299)",
 
-          background: "#73C8A9" /* fallback for old browsers */,
-          background:
-            "-webkit-linear-gradient(to right, #373B44, #73C8A9)" /* Chrome 10-25, Safari 5.1-6 */,
-          background:
-            "linear-gradient(to right, #373B44, #73C8A9)" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
+          // background: "#DAD299",
+          // background: "-webkit-linear-gradient(to right, #B0DAB9, #DAD299)",
+          // background: "linear-gradient(to right, #B0DAB9, #DAD299)",
+
+          // background: "#73C8A9" /* fallback for old browsers */,
+          // background:
+          //   "-webkit-linear-gradient(to right, #373B44, #73C8A9)" /* Chrome 10-25, Safari 5.1-6 */,
+          // background:
+          //   "linear-gradient(to right, #373B44, #73C8A9)" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
 
           boxShadow:
             props.theme == "light"
               ? `0.5ch 1.5ch 2ch rgba(0, 0, 0, 0.4)`
               : `0.5ch 1.5ch 2ch rgb(38, 38, 38,0.8)`,
-          width: "50%",
         }}
       >
-        <Stack style={{ justifyContent: "center" }}>
-          {/* <span
-            style={{
-              fontSize: "1.3rem",
-              fontWeight: "700",
-              letterSpacing: "0.1ch",
-              color:
-                props.theme !== "light"
-                  ? // ? "rgb(67, 61, 61)"
-                    "rgba(0, 0, 0,0.5)"
-                  : "rgb(255, 255, 230)",
-              textAlign: "center",
-              marginBottom: "1.5ch",
-            }}
-          >
-            {" "}
-            My skills{" "}
-          </span> */}
-        </Stack>
-        <div className={style.skillsContainer}>
+        <Stack
+          direction="row"
+          className={style.skillsContainer}
+          sx={{
+            columnGap: {
+              lg: "5ch",
+            },
+            rowGap: {
+              lg: "5ch",
+            },
+          }}
+        >
           {skills.map((element, index) => (
-            <span
+            <Typography
+              sx={{ fontWeight: "800" }}
               key={element}
               className={
                 props.theme === "dark" ? style.skillDark : style.skillLight
@@ -150,9 +143,9 @@ function Skills(props) {
               style={{ textAlign: "center" }}
             >
               {element}
-            </span>
+            </Typography>
           ))}
-        </div>
+        </Stack>
         <div ref={skillsRef}></div>
       </motion.div>
     </Stack>
