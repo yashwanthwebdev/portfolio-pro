@@ -11,6 +11,7 @@ import pineapple from "../../Images/portfolio/pineapple.jpg";
 import plants_2 from "../../Images/portfolio/plants_2.jpg";
 import hanging_flowers_mobile from "../../Images/portfolio/hanging_flowers_mobile.jpg";
 import planton_mobile from "../../Images/portfolio/planton_mobile.jpg";
+import intro_mobile_1 from "../../Images/portfolio/intro_mobile_4.jpg";
 
 // import { Stack } from "@mui/material";
 import Grid from "@mui/material/Grid";
@@ -36,7 +37,8 @@ function Projects(props) {
       // ref={projectsRef}
       sx={{
         backgroundImage: {
-          xs: `url(${planton_mobile})`,
+          // xs: `url(${planton_mobile})`,
+          xs: `url(${intro_mobile_1})`,
           md: `url(${plants_2})`,
         },
       }}

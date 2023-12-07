@@ -7,6 +7,7 @@ import { Typography } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import feather from "../../Images/portfolio/feather.jpg";
 import rose from "../../Images/portfolio/rose_mobile.jpg";
+import intro_mobile_1 from "../../Images/portfolio/intro_mobile_3.jpg";
 
 function Contact(props) {
   // const [theme] = useOutletContext();
@@ -27,7 +28,8 @@ function Contact(props) {
     <Stack
       sx={{
         backgroundImage: {
-          xs: `url(${rose})`,
+          // xs: `url(${rose})`,
+          xs: `url(${intro_mobile_1})`,
           md: `url(${feather})`,
         },
       }}

@@ -5,6 +5,7 @@ import { Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import plantsAndLeaves from "../../Images/portfolio/pensAndLeaves.jpg";
 import plants_3 from "../../Images/portfolio/plants_3.jpg";
+import intro_mobile_1 from "../../Images/portfolio/intro_mobile_2.jpg";
 
 function Skills(props) {
   const skillsRef = useRef(null);
@@ -44,9 +45,17 @@ function Skills(props) {
         height: "100vh",
         scrollSnapAlign: "start",
         scrollSnapStop: "always",
-        background: props.theme == "light" ? "white" : "black",
-        backgroundImage: `url(${plants_3})`,
+        // background: props.theme == "light" ? "white" : "black",
+        // backgroundImage: `url(${plants_3})`,
         backgroundSize: "cover",
+      }}
+      sx={{
+        backgroundImage: {
+          // xs: `url(${abstract_mobile})`,
+          // xs: `url(${hanging_flowers_mobile})`,
+          xs: `url(${intro_mobile_1})`,
+          md: `url(${plants_3})`,
+        },
       }}
     >
       <Typography

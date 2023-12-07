@@ -5,6 +5,8 @@ import { motion, useInView, useAnimation } from "framer-motion";
 import notepad_1 from "../../Images/portfolio/notepad_1.jpg";
 import plants_1 from "../../Images/portfolio/plants_1.jpg";
 import abstract_mobile from "../../Images/portfolio/abstract_mobile.jpg";
+import hanging_flowers_mobile from "../../Images/portfolio/hanging_flowers_mobile.jpg";
+import intro_mobile_1 from "../../Images/portfolio/intro_mobile_1.jpg";
 import style from "./Intro.module.css";
 
 function Intro(props) {
@@ -30,7 +32,9 @@ function Intro(props) {
       }}
       sx={{
         backgroundImage: {
-          xs: `url(${abstract_mobile})`,
+          // xs: `url(${abstract_mobile})`,
+          // xs: `url(${hanging_flowers_mobile})`,
+          xs: `url(${intro_mobile_1})`,
           md: `url(${plants_1})`,
         },
       }}
@@ -60,22 +64,11 @@ function Intro(props) {
       <motion.div
         initial={{
           opacity: 0,
-          // x: -200,
-          // y: 200,
-          fontSize: "0.5rem",
         }}
         variants={{
-          hidden: {
-            opacity: 0,
-            // x: -200,
-            // y: 200,
-            fontSize: "0.5rem",
-          },
+          hidden: { opacity: 0 },
           visible: {
-            opacity: 1,
-            // x: 100,
-            // y: 250,
-            fontSize: "2rem",
+            opacity: [0, 1],
           },
         }}
         animate={mainControls}
