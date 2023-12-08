@@ -84,7 +84,7 @@ function Projects(props) {
           // padding: "1ch",
         }}
       >
-        PROJECTS
+        MY HOBBY PROJECTS
       </Typography>
       <motion.div
         variants={{

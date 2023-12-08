@@ -76,7 +76,7 @@ function Skills(props) {
           placeSelf: "center",
         }}
       >
-        SKILLS
+        MY SKILLS
       </Typography>
       <motion.div
         className={style.motionContainer}

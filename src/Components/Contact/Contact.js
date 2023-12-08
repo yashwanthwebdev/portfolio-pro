@@ -74,7 +74,7 @@ function Contact(props) {
           // padding: "1ch",
         }}
       >
-        CONTACT
+        CONTACT DETAILS
       </Typography>
       <motion.div
         ref={contactRef}
