@@ -8,6 +8,7 @@ import abstract_mobile from "../../Images/portfolio/abstract_mobile.jpg";
 import hanging_flowers_mobile from "../../Images/portfolio/hanging_flowers_mobile.jpg";
 import intro_mobile_1 from "../../Images/portfolio/intro_mobile_1.jpg";
 import style from "./Intro.module.css";
+import Box from "@mui/material/Box";
 
 function Intro(props) {
   // const theme = "light";
@@ -60,7 +61,7 @@ function Intro(props) {
           // padding: "1ch",
         }}
       >
-        INTRO
+        ABOUT ME
       </Typography>
       <motion.div
         style={{
@@ -103,6 +104,7 @@ function Intro(props) {
               lg: 8,
             }}
             sx={{ justifyContent: "space-between" }}
+            // sx={{ justifyContent: "space-around" }}
           >
             <motion.div
               className={style.introParaContainer}
@@ -140,8 +142,64 @@ function Intro(props) {
                 }}
                 style={{}}
               >
-                Hey, I am Yashwanth. I have professional experience in web
-                development...
+                {/* Hey, I am Yashwanth. I have professional experience in web
+                development... */}
+                Hello! I'm Yashwanth,{" "}
+                <Box sx={{ fontWeight: 800 }} component="span">
+                  a passionate website developer
+                </Box>{" "}
+                dedicated to transforming ideas into engaging online
+                experiences.
+              </Typography>
+            </motion.div>
+            <motion.div
+              className={style.introParaContainer}
+              initial={{
+                opacity: 0,
+              }}
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: [0, 1],
+                },
+              }}
+              animate={mainControls}
+              transition={{ duration: 1.5 }}
+              style={{
+                placeContent: "center",
+                placeItems: "center",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <Typography
+                className={style.introParagraphs}
+                sx={{
+                  color: props.theme == "light" ? "black" : "white",
+                  fontFamily:
+                    props.theme == "light"
+                      ? "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
+                      : "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+                  lineHeight: "3ch",
+                  fontFamily: "monospace",
+                  margin: "auto",
+                  textAlign: "center",
+                  padding: "0ch 1ch 0ch 1ch",
+                  // wordSpacing: "1.5ch",
+                }}
+                style={{}}
+              >
+                With a{" "}
+                <Box sx={{ fontWeight: 800 }} component="span" f>
+                  keen eye for design
+                </Box>{" "}
+                and a knack for coding, I specialize in creating{" "}
+                <Box component="span" sx={{ fontWeight: 800 }}>
+                  user-friendly, responsive
+                </Box>{" "}
+                websites that seamlessly blend{" "}
+                <Box component="span" sx={{ fontWeight: 800 }}>
+                  functionality and aesthetics.
+                </Box>
               </Typography>
             </motion.div>
             <motion.div
@@ -179,8 +237,14 @@ function Intro(props) {
                 }}
                 style={{}}
               >
-                I am passionate about working on projects that make a positive
-                impact on the planet and the animals...
+                {/* I am passionate about working on projects that make a positive
+                impact on the planet and the animals... */}
+                Let's embark on a digital journey together, where{" "}
+                <Box component="span" sx={{ fontWeight: 800 }}>
+                  {" "}
+                  innovation meets pixel-perfect precision.
+                </Box>{" "}
+                Welcome to my world of web development!
               </Typography>
             </motion.div>
           </Stack>

@@ -83,17 +83,15 @@ function Contact(props) {
           y: 200,
         }}
         variants={{
-          hidden: {
-            opacity: 0,
-            y: 200,
-          },
+          hidden: { opacity: 0, y: 200 },
           visible: {
-            opacity: 1,
+            opacity: [0, 1],
             y: 280,
           },
         }}
         animate={mainControls}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.5 }}
+        style={{ backdropFilter: "blur(10px)" }}
       >
         <Stack
           className={style.container}
@@ -120,7 +118,6 @@ function Contact(props) {
                 color: "black",
                 // color: theme == "light" ? "black" : "white",
                 fontWeight: "600",
-                backdropFilter: "blur(10px)",
               }}
               sx={{
                 fontSize: {
