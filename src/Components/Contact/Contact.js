@@ -101,7 +101,7 @@ function Contact(props) {
           direction="column"
         >
           <Stack
-            className={style.mailId}
+            className={`${style.mailId} ${style.introParagraphs}`}
             direction="row"
             style={{ margin: "auto", alignItems: "center" }}
           >
@@ -121,8 +121,8 @@ function Contact(props) {
               }}
               sx={{
                 fontSize: {
-                  xs: "1rem",
-                  lg: "1.3rem",
+                  xs: "0.9rem",
+                  lg: "1.1rem",
                 },
               }}
             >
