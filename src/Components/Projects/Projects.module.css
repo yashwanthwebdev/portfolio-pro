@@ -97,7 +97,7 @@
     place-items: center;
     min-width: 90vw;
     border-radius: 2ch;
-    overflow: hidden;
+    /* overflow: hidden; */
     max-width: 70ch;
     /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
   }

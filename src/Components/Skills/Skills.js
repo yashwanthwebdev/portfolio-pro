@@ -65,12 +65,6 @@ function Skills(props) {
           width: "100%",
           textAlign: "center",
           fontWeight: "800",
-
-          // color:
-          //   props.theme === "light"
-          //     ? // ? "rgb(67, 61, 61)"
-          //       "rgba(0, 0, 0,0.5)"
-          //     : "rgb(255, 255, 230)",
           color:
             props.theme === "light"
               ? // ? "rgb(67, 61, 61)"
@@ -78,11 +72,8 @@ function Skills(props) {
               : "rgba(0, 0, 0,0.5)",
           backgroundColor:
             props.theme === "light" ? "rgba(0,0,0,0.8)" : "white",
-          // borderRadius: "0ch 0ch 50% 50%",
           width: "100%",
-          // width: "min-content",
           placeSelf: "center",
-          padding: "1ch",
         }}
       >
         SKILLS
@@ -90,16 +81,10 @@ function Skills(props) {
       <motion.div
         className={style.motionContainer}
         variants={{
-          // hidden: { opacity: 0, x: "100%" },
           hidden: { opacity: 0 },
           visible: {
             opacity: [0, 1],
-            // rotate: [0, 360],
-            // borderRadius: ["50%", "50%"],
             borderRadius: ["2%", "2%"],
-            // padding: ["20ch", "10ch"],
-            // padding: ["2ch", "2ch"],
-            // x: [800, 320],
           },
         }}
         animate={mainControls}
@@ -113,7 +98,7 @@ function Skills(props) {
           justifyContent: "center",
           // outline: "2px red solid",
           margin: "auto",
-
+          padding: "1ch",
           // background: "#DAD299",
           // background: "-webkit-linear-gradient(to right, #B0DAB9, #DAD299)",
           // background: "linear-gradient(to right, #B0DAB9, #DAD299)",
@@ -134,6 +119,7 @@ function Skills(props) {
           direction="row"
           className={style.skillsContainer}
           sx={{
+            justifyContent: "space-between",
             columnGap: {
               lg: "5ch",
             },
@@ -146,9 +132,9 @@ function Skills(props) {
             <Typography
               sx={{ fontWeight: "800" }}
               key={element}
-              className={
-                props.theme === "dark" ? style.skillDark : style.skillLight
-              }
+              className={`
+                ${style.eachSkill}
+                {props.theme === "dark" ? style.skillDark : style.skillLight} `}
               style={{ textAlign: "center" }}
             >
               {element}

@@ -16,7 +16,7 @@ function Home(props) {
 
   return (
     // <div className={style.container}>
-    <div>
+    <Stack style={{ width: "100vw" }}>
       <Intro theme={props.theme} />
       <Skills theme={props.theme} />
       <Projects theme={props.theme} />
@@ -94,7 +94,7 @@ function Home(props) {
           ))}
         </div>
       </motion.div> */}
-    </div>
+    </Stack>
   );
 }
 

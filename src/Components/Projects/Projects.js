@@ -81,7 +81,7 @@ function Projects(props) {
           // borderRadius: "0ch 0ch 50% 50%",
           width: "100%",
           placeSelf: "center",
-          padding: "1ch",
+          // padding: "1ch",
         }}
       >
         PROJECTS

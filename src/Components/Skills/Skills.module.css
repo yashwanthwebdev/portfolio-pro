@@ -81,3 +81,12 @@
 
   /* padding: 1ch; */
 }
+
+.eachSkill {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 0.2ch;
+}
+.eachSkill::first-letter {
+  border-radius: 1ch;
+  text-decoration-line: underline;
+}

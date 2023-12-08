@@ -7,6 +7,11 @@ import Button from "@mui/material/Button";
 import { Stack, Typography } from "@mui/material";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import abstract_mobile from "./Images/portfolio/abstract_mobile.jpg";
+import hanging_flowers_mobile from "./Images/portfolio/hanging_flowers_mobile.jpg";
+import intro_mobile_1 from "./Images/portfolio/intro_mobile_1.jpg";
+import plants_1 from "./Images/portfolio/plants_1.jpg";
+
 function App() {
   const [backgroundColor, setBackgroundColor] = useState(
     "rgba(123, 32, 146, 0.8)"
@@ -27,19 +32,26 @@ function App() {
   return (
     <Stack
       className={style.container}
+      style={{
+        height: "100vh",
+        scrollSnapAlign: "end",
+        scrollSnapStop: "always",
+        backgroundSize: "cover",
+        // outline: "2px red solid",
+      }}
+      sx={{
+        backgroundImage: {
+          // xs: `url(${abstract_mobile})`,
+          // xs: `url(${hanging_flowers_mobile})`,
+          xs: `url(${intro_mobile_1})`,
+          md: `url(${plants_1})`,
+        },
+      }}
       // style={{background:theme=="light" ? "radial-gradient(circle,  rgb(128, 0, 96), rgb(255, 153, 230) )" :"radial-gradient(circle, rgb(0, 26, 26),rgb(0, 77, 77))"}}>
-      style={
-        {
-          // background:
-          //   theme == "light"
-          //     ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
-          //     : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
-        }
-      }
     >
       <Stack
         direction="row"
-        justifyContent="end"  
+        justifyContent="end"
         style={{
           position: "fixed",
           justifyContent: "end",

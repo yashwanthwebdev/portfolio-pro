@@ -88,11 +88,13 @@
     display: grid;
     grid-template-rows: min-content minmax(50ch, 1fr);
     /* gap:3ch; */
-    background-color: blue;
+    /* background-color: blue; */
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     /* font-style:italic; */
-    outline-color: aqua;
+    /* outline-color: aqua; */
     max-height: 100vh;
+    /* background-image: url("./Images/portfolio/intro_mobile_1.jpg");
+    background-size: cover; */
   }
 
   .navBar {

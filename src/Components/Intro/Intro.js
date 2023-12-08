@@ -29,6 +29,7 @@ function Intro(props) {
         scrollSnapAlign: "end",
         scrollSnapStop: "always",
         backgroundSize: "cover",
+        // outline: "2px red solid",
       }}
       sx={{
         backgroundImage: {
@@ -43,10 +44,10 @@ function Intro(props) {
         variant="h5"
         style={{
           fontFamily: "monospace",
-          width: "100%",
+          // width: "100%",
           textAlign: "center",
           fontWeight: "800",
-          width: "100%",
+          // width: "100%",
           color:
             props.theme === "light"
               ? // ? "rgb(67, 61, 61)"
@@ -56,23 +57,12 @@ function Intro(props) {
             props.theme === "light" ? "rgba(0,0,0,0.8)" : "white",
           width: "100%",
           placeSelf: "center",
-          padding: "1ch",
+          // padding: "1ch",
         }}
       >
         INTRO
       </Typography>
       <motion.div
-        initial={{
-          opacity: 0,
-        }}
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: [0, 1],
-          },
-        }}
-        animate={mainControls}
-        transition={{ duration: 1 }}
         style={{
           display: "flex",
           flexDirection: "column",
@@ -87,33 +77,114 @@ function Intro(props) {
           },
         }}
       >
-        <Stack
-          style={{
-            placeContent: "center",
-            placeItems: "center",
-          }}
+        <motion.div
+        // initial={{
+        //   opacity: 0,
+        // }}
+        // variants={{
+        //   hidden: { opacity: 0 },
+        //   visible: {
+        //     opacity: [0, 1],
+        //   },
+        // }}
+        // animate={mainControls}
+        // transition={{ duration: 1.5 }}
+        // style={{
+        //   placeContent: "center",
+        //   placeItems: "center",
+        //   backdropFilter: "blur(10px)",
+        // }}
         >
-          <Typography
-            sx={{
-              color: props.theme == "light" ? "black" : "white",
-              fontFamily:
-                props.theme == "light"
-                  ? "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
-                  : "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
-              lineHeight: "3ch",
-              fontFamily: "monospace",
-              fontSize: "1.3rem",
-              margin: "auto",
-              textAlign: "center",
+          <Stack
+            direction="column"
+            // gap={3}
+            gap={{
+              xs: 3,
+              lg: 8,
             }}
-            style={{
-              backdropFilter: "blur(10px)",
-            }}
+            sx={{ justifyContent: "space-between" }}
           >
-            Hey, I am Yashwanth. I have professional experience in web
-            development.
-          </Typography>
-        </Stack>
+            <motion.div
+              className={style.introParaContainer}
+              initial={{
+                opacity: 0,
+              }}
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: [0, 1],
+                },
+              }}
+              animate={mainControls}
+              transition={{ duration: 1.5 }}
+              style={{
+                placeContent: "center",
+                placeItems: "center",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <Typography
+                className={style.introParagraphs}
+                sx={{
+                  color: props.theme == "light" ? "black" : "white",
+                  fontFamily:
+                    props.theme == "light"
+                      ? "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
+                      : "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+                  lineHeight: "3ch",
+                  fontFamily: "monospace",
+                  margin: "auto",
+                  textAlign: "center",
+                  padding: "0ch 1ch 0ch 1ch",
+                  // wordSpacing: "1.5ch",
+                }}
+                style={{}}
+              >
+                Hey, I am Yashwanth. I have professional experience in web
+                development...
+              </Typography>
+            </motion.div>
+            <motion.div
+              className={style.introParaContainer}
+              initial={{
+                opacity: 0,
+              }}
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: [0, 1],
+                },
+              }}
+              animate={mainControls}
+              transition={{ duration: 1.5 }}
+              style={{
+                placeContent: "center",
+                placeItems: "center",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <Typography
+                className={style.introParagraphs}
+                sx={{
+                  color: props.theme == "light" ? "black" : "white",
+                  fontFamily:
+                    props.theme == "light"
+                      ? "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
+                      : "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+                  lineHeight: "3ch",
+                  fontFamily: "monospace",
+                  margin: "auto",
+                  textAlign: "center",
+                  padding: "0ch 1ch 0ch 1ch",
+                }}
+                style={{}}
+              >
+                I am passionate about working on projects that make a positive
+                impact on the planet and the animals...
+              </Typography>
+            </motion.div>
+          </Stack>
+        </motion.div>
         <div ref={introRef}> </div>
       </motion.div>
     </Stack>

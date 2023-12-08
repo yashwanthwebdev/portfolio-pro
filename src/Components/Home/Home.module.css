@@ -76,7 +76,7 @@
     /* grid-template-rows : minmax(5ch,min-content) repeat(auto-fit, minmax(40ch, min-content)); */
     grid-template-rows: minmax(5ch, min-content) 1fr 1fr;
     /* grid-template-rows : min-content 1fr 1fr; */
-    outline-color: red;
+    /* outline-color: red; */
 
     gap: 3%;
     min-height: min-content;
