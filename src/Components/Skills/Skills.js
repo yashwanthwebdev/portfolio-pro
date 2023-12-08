@@ -130,7 +130,7 @@ function Skills(props) {
         >
           {skills.map((element, index) => (
             <Typography
-              sx={{ fontWeight: "800" }}
+              // sx={{ fontWeight: "800" }}
               key={element}
               className={`
                 ${style.eachSkill}

@@ -87,6 +87,8 @@
   letter-spacing: 0.2ch;
 }
 .eachSkill::first-letter {
-  border-radius: 1ch;
+  /* border-radius: 1ch; */
+  /* font-size: 1.1rem; */
   text-decoration-line: underline;
+  font-weight: 800;
 }
