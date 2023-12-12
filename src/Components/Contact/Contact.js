@@ -102,6 +102,7 @@ function Contact(props) {
             <Stack
               className={`${style.mailId} ${style.introParagraphs}`}
               direction="row"
+              gap={2}
               style={{ margin: "auto", alignItems: "center" }}
             >
               <AiOutlineMail
@@ -120,7 +121,7 @@ function Contact(props) {
                   // color: theme == "light" ? "black" : "white",
                   // fontWeight: "600",
                   fontFamily: "'Bebas Neue', sans-serif",
-                  letterSpacing: "0.1ch",
+                  letterSpacing: "0.5ch",
                 }}
                 sx={{
                   fontSize: {
