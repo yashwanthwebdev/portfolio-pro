@@ -61,10 +61,59 @@ function Intro(props) {
             direction="column"
             gap={{
               xs: 8,
-              lg: 8,
+              lg: 10,
             }}
-            sx={{ justifyContent: "space-between" }}
+            sx={{ display: "flex", justifyContent: "space-between" }}
           >
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: [0, 1],
+                },
+              }}
+              animate={mainControls}
+              transition={{ duration: 1.5 }}
+              style={{
+                placeContent: "center",
+                placeItems: "center",
+                marginBottom: "auto",
+              }}
+            >
+              <Typography
+                className={style.pageTitle}
+                variant="h5"
+                style={{
+                  color: "black",
+                  textAlign: "center",
+                  fontWeight: "800",
+                  marginTop: "auto",
+                  width: "100%",
+                  placeSelf: "center",
+                  fontFamily: "'Charmonman', cursive",
+                }}
+                sx={{
+                  marginBottom: {
+                    xs: "auto",
+                    lg: "inherit",
+                  },
+                  letterSpacing: {
+                    xs: "0.6ch",
+                    lg: "1.5ch",
+                  },
+                  wordSpacing: {
+                    xs: "1ch",
+                    lg: "2.5ch",
+                  },
+                }}
+              >
+                WELCOME TO MY PORTFOLIO!
+              </Typography>
+            </motion.div>
+
             <motion.div
               className={style.introParaContainer}
               initial={{
@@ -79,6 +128,7 @@ function Intro(props) {
               animate={mainControls}
               transition={{ duration: 1.5 }}
               style={{
+                // marginTop: "auto",
                 placeContent: "center",
                 placeItems: "center",
                 backdropFilter: "blur(10px)",

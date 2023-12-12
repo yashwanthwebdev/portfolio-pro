@@ -52,6 +52,7 @@ function Contact(props) {
           placeSelf: "center",
           marginTop: "auto",
           marginBottom: "auto",
+          fontFamily: "'Charmonman', cursive",
         }}
         sx={{
           letterSpacing: {
@@ -117,7 +118,9 @@ function Contact(props) {
                   color: "black",
                   // color: "teal",
                   // color: theme == "light" ? "black" : "white",
-                  fontWeight: "600",
+                  // fontWeight: "600",
+                  fontFamily: "'Bebas Neue', sans-serif",
+                  letterSpacing: "0.1ch",
                 }}
                 sx={{
                   fontSize: {

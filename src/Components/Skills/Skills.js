@@ -74,6 +74,7 @@ function Skills(props) {
           fontWeight: "800",
           placeSelf: "center",
           marginTop: "auto",
+          fontFamily: "'Charmonman', cursive",
         }}
         sx={{
           letterSpacing: {
@@ -147,6 +148,9 @@ function Skills(props) {
         >
           {skills.map((element, index) => (
             <Typography
+              style={{
+                fontFamily: "'Bebas Neue', sans-serif",
+              }}
               // sx={{ fontWeight: "800" }}
               key={element}
               className={`

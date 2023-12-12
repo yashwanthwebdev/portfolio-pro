@@ -68,11 +68,21 @@ function Projects(props) {
           textAlign: "center",
           fontWeight: "800",
           marginTop: "auto",
-          marginBottom: "auto",
+          // marginBottom: "auto",
           width: "100%",
           placeSelf: "center",
+          fontFamily: "'Oswald', sans-serif",
+          fontFamily: "'Comforter Brush', cursive",
+          fontFamily: "'Bebas Neue', sans-serif",
+          fontFamily: "'Silkscreen', sans-serif",
+          fontFamily: "'Whisper', cursive",
+          fontFamily: "'Charmonman', cursive",
         }}
         sx={{
+          marginBottom: {
+            xs: "auto",
+            lg: "inherit",
+          },
           letterSpacing: {
             xs: "0.6ch",
             lg: "1.5ch",
@@ -159,10 +169,10 @@ function Projects(props) {
             >
               <img src={imageChatBot} className={style.projectThumbnail} />
               <div className={style.projectDetailsContainer}>
-                <span className={style.title}>Veganism chat bot</span>
+                <span className={style.title}>Vegan Voice</span>
                 <span className={style.description}>
-                  Created dynamic vegan chatbot, fostering plant-based lifestyle
-                  advocacy through conversation
+                  A persuasive vegan activism chatbot that engages users in
+                  conversations to advocate for an ethical lifestyle.
                 </span>
               </div>
             </a>
@@ -203,7 +213,7 @@ function Projects(props) {
                 className={style.projectThumbnail}
               />
               <div className={style.projectDetailsContainer}>
-                <span className={style.title}>Football stats</span>
+                <span className={style.title}>Football Stats Hub</span>
                 <span className={style.description}>
                   A place to get all the stats you want to know about any team
                   and player.
@@ -249,7 +259,7 @@ function Projects(props) {
               />
 
               <div className={style.projectDetailsContainer}>
-                <span className={style.title}>Vegan meal helper</span>
+                <span className={style.title}>Culinary Craft</span>
                 <span className={style.description}>
                   A nice little meal suggester to help you cook delicious vegan
                   food using the ingredients you have.
@@ -293,7 +303,7 @@ function Projects(props) {
               />
 
               <div className={style.projectDetailsContainer}>
-                <span className={style.title}>Vegan activism simulator</span>
+                <span className={style.title}>Advocacy Quest</span>
                 <span className={style.description}>
                   A mini-game that will test your activism skills!{" "}
                 </span>
@@ -341,9 +351,9 @@ function Projects(props) {
               />
 
               <div className={style.projectDetailsContainer}>
-                <span className={style.title}>To-do app</span>
+                <span className={style.title}>TaskTrove</span>
                 <span className={style.description}>
-                  A simple app that helps to manage your to-dos!
+                  An app that helps to manage your to-dos!
                 </span>
               </div>
             </a>
