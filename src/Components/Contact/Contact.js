@@ -42,43 +42,11 @@ function Contact(props) {
         backgroundSize: "cover",
       }}
     >
-      {/* <Typography
-        variant="h5"
-        style={{
-          fontFamily: "monospace",
-          width: "100%",
-          textAlign: "center",
-          fontWeight: "800",
-
-          // color:
-          //   props.theme === "light"
-          //     ? // ? "rgb(67, 61, 61)"
-          //       "rgba(0, 0, 0,0.5)"
-          //     : "rgb(255, 255, 230)",
-          // backgroundColor: props.theme === "light" ? "white" : "#8c999a",
-          // borderRadius: "0ch 0ch 50% 50%",
-          width: "min-content",
-          color:
-            props.theme === "light"
-              ? // ? "rgb(67, 61, 61)"
-                "rgb(255, 255, 230)"
-              : "rgba(0, 0, 0,0.5)",
-          backgroundColor:
-            props.theme === "light" ? "rgba(0,0,0,0.8)" : "white",
-          // borderRadius: "0ch 0ch 50% 50%",
-          width: "100%",
-          placeSelf: "center",
-          // padding: "1ch",
-        }}
-      >
-        CONTACT DETAILS
-      </Typography> */}
       <Typography
         variant="h5"
         style={{
           color: "black",
           fontFamily: "monospace",
-          width: "100%",
           textAlign: "center",
           fontWeight: "800",
           placeSelf: "center",
@@ -89,6 +57,10 @@ function Contact(props) {
           letterSpacing: {
             xs: "0.7ch",
             lg: "1.3ch",
+          },
+          paddingInline: {
+            xs: "3ch",
+            lg: "0ch",
           },
         }}
       >

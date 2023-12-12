@@ -70,7 +70,6 @@ function Skills(props) {
         style={{
           color: "black",
           fontFamily: "monospace",
-          width: "100%",
           textAlign: "center",
           fontWeight: "800",
           placeSelf: "center",
@@ -81,10 +80,14 @@ function Skills(props) {
             xs: "0.6ch",
             lg: "1.5ch",
           },
-          lineHeight: "4ch",
+          lineHeight: "3ch",
+          paddingInline: {
+            xs: "3ch",
+            lg: "0ch",
+          },
         }}
       >
-        THESE ARE FEW OF MY SKILLS
+        THESE ARE MY SKILLS
       </Typography>
       <motion.div
         className={style.motionContainer}

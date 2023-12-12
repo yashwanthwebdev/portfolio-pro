@@ -25,13 +25,12 @@
   .introParagraphs {
     color: teal;
   }
+  .introParaContainer {
+    padding: 1.5ch;
+  }
 }
 
 @media screen and (min-width: 600px) {
-  /* .introParagraphs {
-    width: 50%;
-  } */
-
   .introParaContainer {
     width: 50%;
     padding: 3ch;

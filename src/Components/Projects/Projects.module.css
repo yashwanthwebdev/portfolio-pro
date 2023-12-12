@@ -44,7 +44,7 @@
 .projectThumbnail {
   width: 20ch;
   height: 20ch;
-  border-radius: 1ch;
+  /* border-radius: 1ch; */
   /* outline:solid; */
   place-self: center;
   align-self: center;
@@ -53,6 +53,7 @@
 .title {
   font-size: 1.5rem;
   font-weight: 900;
+  color: beige;
 }
 
 .description {
