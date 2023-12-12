@@ -87,13 +87,14 @@ function Contact(props) {
         }}
         sx={{
           letterSpacing: {
-            xs: "0.3ch",
-            lg: "1.5ch",
+            xs: "0.7ch",
+            lg: "1.3ch",
           },
-          lineHeight: "4ch",
         }}
       >
-        YOU CAN CONTACT ME AT
+        LET'S EMBARK ON A DIGITAL JOURNEY TOGETHER!
+        {/* where innovation meets
+        pixel-perfect precision. */}
       </Typography>
       <Stack style={{ height: "50%" }}>
         <motion.div

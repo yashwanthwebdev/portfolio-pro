@@ -166,55 +166,6 @@ function Intro(props) {
                 </Box>
               </Typography>
             </motion.div>
-            <motion.div
-              className={style.introParaContainer}
-              initial={{
-                opacity: 0,
-              }}
-              variants={{
-                hidden: { opacity: 0 },
-                visible: {
-                  opacity: [0, 1],
-                },
-              }}
-              animate={mainControls}
-              transition={{ duration: 1.5 }}
-              style={{
-                placeContent: "center",
-                placeItems: "center",
-                backdropFilter: "blur(10px)",
-              }}
-            >
-              <Typography
-                className={style.introParagraphs}
-                sx={{
-                  // color: props.theme == "light" ? "black" : "white",
-                  fontFamily:
-                    props.theme == "light"
-                      ? "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
-                      : "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
-                  lineHeight: "3ch",
-                  fontFamily: "monospace",
-                  margin: "auto",
-                  textAlign: "center",
-                  padding: "0ch 1ch 0ch 1ch",
-                  fontSize: {
-                    xs: "1rem",
-                    lg: "1.4rem",
-                  },
-                }}
-                style={{}}
-              >
-                {/* I am passionate about working on projects that make a positive
-                impact on the planet and the animals... */}
-                Let's embark on a digital journey together, where{" "}
-                <Box component="span" sx={{ fontWeight: 800 }}>
-                  {" "}
-                  innovation meets pixel-perfect precision.
-                </Box>{" "}
-                Welcome to my world of web development!
-              </Typography>
-            </motion.div>
           </Stack>
         </motion.div>
         <div ref={introRef}> </div>

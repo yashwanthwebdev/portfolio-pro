@@ -9,6 +9,7 @@
 
 .introParagraphs {
   word-spacing: 1.5ch;
+  padding: 2ch;
 }
 
 .introParagraphs::first-letter {
