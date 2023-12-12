@@ -67,18 +67,22 @@ function Intro(props) {
           >
             <motion.div
               initial={{
+                scale: 0.5,
                 opacity: 0,
                 color: "white",
               }}
               variants={{
-                hidden: { opacity: 0, color: "white" },
+                hidden: { opacity: 0 },
                 visible: {
+                  scale: [0.5, 1],
+
                   opacity: [0, 1],
                   color: "black",
                 },
               }}
               animate={mainControls}
-              transition={{ delay: 0.75, duration: 1, ease: "anticipate" }}
+              transition={{ delay: 0.5, duration: 1.5, ease: "anticipate" }}
+              // transition={{ delay: 0.75, duration: 1, ease: "easeInOut" }}
               style={{
                 placeContent: "center",
                 placeItems: "center",

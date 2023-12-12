@@ -61,12 +61,14 @@ function Projects(props) {
     >
       <motion.div
         initial={{
+          scale: 0.5,
           opacity: 0,
           color: "white",
         }}
         variants={{
           hidden: { opacity: 0, color: "white" },
           visible: {
+            scale: [0.5, 1],
             opacity: [0, 1],
             color: "black",
           },
@@ -81,7 +83,7 @@ function Projects(props) {
           placeSelf: "center",
         }}
         animate={mainControls}
-        transition={{ delay: 0.75, duration: 1, ease: "anticipate" }}
+        transition={{ delay: 0.5, duration: 1.5, ease: "anticipate" }}
       >
         <Typography
           className={style.pageTitle}
