@@ -68,15 +68,17 @@ function Intro(props) {
             <motion.div
               initial={{
                 opacity: 0,
+                color: "white",
               }}
               variants={{
-                hidden: { opacity: 0 },
+                hidden: { opacity: 0, color: "white" },
                 visible: {
                   opacity: [0, 1],
+                  color: "black",
                 },
               }}
               animate={mainControls}
-              transition={{ duration: 1.5 }}
+              transition={{ delay: 0.75, duration: 1, ease: "anticipate" }}
               style={{
                 placeContent: "center",
                 placeItems: "center",
@@ -87,7 +89,6 @@ function Intro(props) {
                 className={style.pageTitle}
                 variant="h5"
                 style={{
-                  color: "black",
                   textAlign: "center",
                   fontWeight: "800",
                   marginTop: "auto",
@@ -126,7 +127,7 @@ function Intro(props) {
                 },
               }}
               animate={mainControls}
-              transition={{ duration: 1.5 }}
+              transition={{ delay: 2, duration: 2, ease: "easeInOut" }}
               style={{
                 // marginTop: "auto",
                 placeContent: "center",
@@ -175,7 +176,7 @@ function Intro(props) {
                 },
               }}
               animate={mainControls}
-              transition={{ duration: 1.5 }}
+              transition={{ delay: 4, duration: 2, ease: "easeInOut" }}
               style={{
                 placeContent: "center",
                 placeItems: "center",

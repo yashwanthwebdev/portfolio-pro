@@ -42,8 +42,20 @@ function Contact(props) {
         backgroundSize: "cover",
       }}
     >
-      <Typography
-        variant="h5"
+      <motion.div
+        initial={{
+          opacity: 0,
+          color: "white",
+        }}
+        variants={{
+          hidden: { opacity: 0, color: "white" },
+          visible: {
+            opacity: [0, 1],
+            color: "black",
+          },
+        }}
+        animate={mainControls}
+        transition={{ delay: 0.75, duration: 1, ease: "anticipate" }}
         style={{
           color: "black",
           fontFamily: "monospace",
@@ -54,21 +66,35 @@ function Contact(props) {
           marginBottom: "auto",
           fontFamily: "'Charmonman', cursive",
         }}
-        sx={{
-          letterSpacing: {
-            xs: "0.7ch",
-            lg: "1.3ch",
-          },
-          paddingInline: {
-            xs: "3ch",
-            lg: "0ch",
-          },
-        }}
       >
-        LET'S EMBARK ON A DIGITAL JOURNEY TOGETHER!
-        {/* where innovation meets
+        <Typography
+          variant="h5"
+          style={{
+            color: "black",
+            fontFamily: "monospace",
+            textAlign: "center",
+            fontWeight: "800",
+            placeSelf: "center",
+            marginTop: "auto",
+            marginBottom: "auto",
+            fontFamily: "'Charmonman', cursive",
+          }}
+          sx={{
+            letterSpacing: {
+              xs: "0.7ch",
+              lg: "1.3ch",
+            },
+            paddingInline: {
+              xs: "3ch",
+              lg: "0ch",
+            },
+          }}
+        >
+          LET'S EMBARK ON A DIGITAL JOURNEY TOGETHER!
+          {/* where innovation meets
         pixel-perfect precision. */}
-      </Typography>
+        </Typography>
+      </motion.div>
       <Stack style={{ height: "50%" }}>
         <motion.div
           ref={contactRef}
@@ -82,7 +108,11 @@ function Contact(props) {
             },
           }}
           animate={mainControls}
-          transition={{ duration: 1.5 }}
+          transition={{
+            delay: 2,
+            duration: 2,
+            ease: "easeInOut",
+          }}
           style={{
             backdropFilter: "blur(10px)",
             marginLeft: "auto",

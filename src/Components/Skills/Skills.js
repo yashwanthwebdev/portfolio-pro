@@ -65,8 +65,20 @@ function Skills(props) {
         },
       }}
     >
-      <Typography
-        variant="h5"
+      <motion.div
+        initial={{
+          opacity: 0,
+          color: "white",
+        }}
+        variants={{
+          hidden: { opacity: 0, color: "white" },
+          visible: {
+            opacity: [0, 1],
+            color: "black",
+          },
+        }}
+        animate={mainControls}
+        transition={{ delay: 0.75, duration: 1, ease: "anticipate" }}
         style={{
           color: "black",
           fontFamily: "monospace",
@@ -76,20 +88,33 @@ function Skills(props) {
           marginTop: "auto",
           fontFamily: "'Charmonman', cursive",
         }}
-        sx={{
-          letterSpacing: {
-            xs: "0.6ch",
-            lg: "1.5ch",
-          },
-          lineHeight: "3ch",
-          paddingInline: {
-            xs: "3ch",
-            lg: "0ch",
-          },
-        }}
       >
-        THESE ARE MY SKILLS
-      </Typography>
+        <Typography
+          variant="h5"
+          style={{
+            color: "black",
+            fontFamily: "monospace",
+            textAlign: "center",
+            fontWeight: "800",
+            placeSelf: "center",
+            marginTop: "auto",
+            fontFamily: "'Charmonman', cursive",
+          }}
+          sx={{
+            letterSpacing: {
+              xs: "0.6ch",
+              lg: "1.5ch",
+            },
+            lineHeight: "3ch",
+            paddingInline: {
+              xs: "3ch",
+              lg: "0ch",
+            },
+          }}
+        >
+          THESE ARE MY SKILLS
+        </Typography>
+      </motion.div>
       <motion.div
         className={style.motionContainer}
         variants={{
@@ -101,7 +126,11 @@ function Skills(props) {
         }}
         animate={mainControls}
         initial={{ opacity: 0 }}
-        transition={{ duration: 1 }}
+        transition={{
+          delay: 2,
+          duration: 2,
+          ease: "easeInOut",
+        }}
         // className={style.skillsMainContainer}
         sx={{}}
         style={{

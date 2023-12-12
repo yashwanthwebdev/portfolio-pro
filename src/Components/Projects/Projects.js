@@ -59,38 +59,57 @@ function Projects(props) {
         backgroundSize: "cover",
       }}
     >
-      <Typography
-        className={style.pageTitle}
-        variant="h5"
+      <motion.div
+        initial={{
+          opacity: 0,
+          color: "white",
+        }}
+        variants={{
+          hidden: { opacity: 0, color: "white" },
+          visible: {
+            opacity: [0, 1],
+            color: "black",
+          },
+        }}
         style={{
           color: "black",
           fontFamily: "monospace",
           textAlign: "center",
           fontWeight: "800",
           marginTop: "auto",
-          // marginBottom: "auto",
           width: "100%",
           placeSelf: "center",
-          fontFamily: "'Oswald', sans-serif",
-          fontFamily: "'Comforter Brush', cursive",
-          fontFamily: "'Bebas Neue', sans-serif",
-          fontFamily: "'Silkscreen', sans-serif",
-          fontFamily: "'Whisper', cursive",
-          fontFamily: "'Charmonman', cursive",
         }}
-        sx={{
-          marginBottom: {
-            xs: "auto",
-            lg: "inherit",
-          },
-          letterSpacing: {
-            xs: "0.6ch",
-            lg: "1.5ch",
-          },
-        }}
+        animate={mainControls}
+        transition={{ delay: 0.75, duration: 1, ease: "anticipate" }}
       >
-        MY RECENT WORK
-      </Typography>
+        <Typography
+          className={style.pageTitle}
+          variant="h5"
+          style={{
+            color: "black",
+            fontFamily: "monospace",
+            textAlign: "center",
+            fontWeight: "800",
+            marginTop: "auto",
+            width: "100%",
+            placeSelf: "center",
+            fontFamily: "'Charmonman', cursive",
+          }}
+          sx={{
+            marginBottom: {
+              xs: "auto",
+              lg: "inherit",
+            },
+            letterSpacing: {
+              xs: "0.6ch",
+              lg: "1.5ch",
+            },
+          }}
+        >
+          MY RECENT WORK
+        </Typography>
+      </motion.div>
       <motion.div
         variants={{
           hidden: { opacity: 0 },
@@ -98,7 +117,11 @@ function Projects(props) {
         }}
         initial={{ opacity: 0 }}
         animate={mainControls}
-        transition={{ duration: 1 }}
+        transition={{
+          delay: 2,
+          duration: 2,
+          ease: "easeInOut",
+        }}
         style={{
           display: "flex",
           placeContent: "center",
