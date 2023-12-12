@@ -3,10 +3,11 @@ import { Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { motion, useInView, useAnimation } from "framer-motion";
 import notepad_1 from "../../Images/portfolio/notepad_1.jpg";
-import plants_1 from "../../Images/portfolio/plants_1.jpg";
 import abstract_mobile from "../../Images/portfolio/abstract_mobile.jpg";
 import hanging_flowers_mobile from "../../Images/portfolio/hanging_flowers_mobile.jpg";
 import intro_mobile_1 from "../../Images/portfolio/intro_mobile_1.jpg";
+// import plants_1 from "../../Images/portfolio/plants_1.jpg";
+import plants_1 from "../../Images/portfolio/intro_mobile_6.jpg";
 import style from "./Intro.module.css";
 import Box from "@mui/material/Box";
 
@@ -27,10 +28,10 @@ function Intro(props) {
     <Stack
       style={{
         height: "100vh",
-        scrollSnapAlign: "end",
+        scrollSnapAlign: "start",
         scrollSnapStop: "always",
         backgroundSize: "cover",
-        // outline: "2px red solid",
+        justifyContent: "center",
       }}
       sx={{
         backgroundImage: {
@@ -41,35 +42,12 @@ function Intro(props) {
         },
       }}
     >
-      <Typography
-        variant="h5"
-        style={{
-          fontFamily: "monospace",
-          // width: "100%",
-          textAlign: "center",
-          fontWeight: "800",
-          // width: "100%",
-          color:
-            props.theme === "light"
-              ? // ? "rgb(67, 61, 61)"
-                "rgb(255, 255, 230)"
-              : "rgba(0, 0, 0,0.5)",
-          backgroundColor:
-            props.theme === "light" ? "rgba(0,0,0,0.8)" : "white",
-          width: "100%",
-          placeSelf: "center",
-          // padding: "1ch",
-        }}
-      >
-        ABOUT ME
-      </Typography>
       <motion.div
         style={{
           display: "flex",
           flexDirection: "column",
           placeSelf: "center",
           justifyContent: "center",
-          height: "100%",
         }}
         sx={{
           width: {
@@ -78,33 +56,14 @@ function Intro(props) {
           },
         }}
       >
-        <motion.div
-        // initial={{
-        //   opacity: 0,
-        // }}
-        // variants={{
-        //   hidden: { opacity: 0 },
-        //   visible: {
-        //     opacity: [0, 1],
-        //   },
-        // }}
-        // animate={mainControls}
-        // transition={{ duration: 1.5 }}
-        // style={{
-        //   placeContent: "center",
-        //   placeItems: "center",
-        //   backdropFilter: "blur(10px)",
-        // }}
-        >
+        <motion.div>
           <Stack
             direction="column"
-            // gap={3}
             gap={{
-              xs: 3,
+              xs: 8,
               lg: 8,
             }}
             sx={{ justifyContent: "space-between" }}
-            // sx={{ justifyContent: "space-around" }}
           >
             <motion.div
               className={style.introParaContainer}
@@ -128,7 +87,6 @@ function Intro(props) {
               <Typography
                 className={style.introParagraphs}
                 sx={{
-                  color: props.theme == "light" ? "black" : "white",
                   fontFamily:
                     props.theme == "light"
                       ? "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
@@ -138,13 +96,16 @@ function Intro(props) {
                   margin: "auto",
                   textAlign: "center",
                   padding: "0ch 1ch 0ch 1ch",
-                  // wordSpacing: "1.5ch",
+                  fontSize: {
+                    xs: "1rem",
+                    lg: "1.4rem",
+                  },
                 }}
                 style={{}}
               >
                 {/* Hey, I am Yashwanth. I have professional experience in web
                 development... */}
-                Hello! I'm Yashwanth,{" "}
+                Hello, there! I'm Yashwanth,{" "}
                 <Box sx={{ fontWeight: 800 }} component="span">
                   a passionate website developer
                 </Box>{" "}
@@ -174,7 +135,6 @@ function Intro(props) {
               <Typography
                 className={style.introParagraphs}
                 sx={{
-                  color: props.theme == "light" ? "black" : "white",
                   fontFamily:
                     props.theme == "light"
                       ? "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
@@ -184,6 +144,10 @@ function Intro(props) {
                   margin: "auto",
                   textAlign: "center",
                   padding: "0ch 1ch 0ch 1ch",
+                  fontSize: {
+                    xs: "1rem",
+                    lg: "1.4rem",
+                  },
                   // wordSpacing: "1.5ch",
                 }}
                 style={{}}
@@ -224,7 +188,7 @@ function Intro(props) {
               <Typography
                 className={style.introParagraphs}
                 sx={{
-                  color: props.theme == "light" ? "black" : "white",
+                  // color: props.theme == "light" ? "black" : "white",
                   fontFamily:
                     props.theme == "light"
                       ? "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
@@ -234,6 +198,10 @@ function Intro(props) {
                   margin: "auto",
                   textAlign: "center",
                   padding: "0ch 1ch 0ch 1ch",
+                  fontSize: {
+                    xs: "1rem",
+                    lg: "1.4rem",
+                  },
                 }}
                 style={{}}
               >

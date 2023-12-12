@@ -1,24 +1,13 @@
 .skillsContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   width: 100%;
   gap: 2ch;
-  place-content: space-around;
   place-items: center;
   height: max-content;
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  /* gap: 1ch; */
   place-content: center;
-  place-items: center;
-  /* padding: 1ch; */
-  height: max-content;
-  column-gap: 2ch;
-  row-gap: 3ch;
 }
 
 .motionContainer {
@@ -32,6 +21,17 @@
   height: 30ch;
   width: 50%;
   backdrop-filter: blur(10px);
+  background-color: rgb(0, 0, 0, 1);
+}
+
+.eachSkill {
+  color: teal;
+  /* letter-spacing: 2ch; */
+}
+
+.eachSkill.eachSkill::first-letter {
+  color: beige;
+  /* font-size: 1.1rem; */
 }
 
 @media screen and (max-width: 600px) {
@@ -89,6 +89,6 @@
 .eachSkill::first-letter {
   /* border-radius: 1ch; */
   /* font-size: 1.1rem; */
-  text-decoration-line: underline;
+  /* text-decoration-line: underline; */
   font-weight: 800;
 }

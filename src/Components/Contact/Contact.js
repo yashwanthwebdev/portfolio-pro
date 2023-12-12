@@ -26,26 +26,23 @@ function Contact(props) {
 
   return (
     <Stack
+      direction="column"
       sx={{
+        display: "flex",
         backgroundImage: {
-          // xs: `url(${rose})`,
           xs: `url(${intro_mobile_1})`,
           md: `url(${feather})`,
         },
+        justifyContent: "space-around",
       }}
       style={{
         height: "100vh",
         scrollSnapAlign: "end",
         scrollSnapStop: "always",
-        // background:
-        //   props.theme == "light"
-        //     ? "radial-gradient(circle,  rgb(255, 153, 230) , rgb(179, 0, 131))"
-        //     : "radial-gradient(circle,rgb(0, 77, 77),  rgb(0, 26, 26))",
-        // background: props.theme == "light" ? "white" : "black",
         backgroundSize: "cover",
       }}
     >
-      <Typography
+      {/* <Typography
         variant="h5"
         style={{
           fontFamily: "monospace",
@@ -75,62 +72,93 @@ function Contact(props) {
         }}
       >
         CONTACT DETAILS
-      </Typography>
-      <motion.div
-        ref={contactRef}
-        initial={{
-          opacity: 0,
-          y: 200,
+      </Typography> */}
+      <Typography
+        variant="h5"
+        style={{
+          color: "black",
+          fontFamily: "monospace",
+          width: "100%",
+          textAlign: "center",
+          fontWeight: "800",
+          placeSelf: "center",
+          marginTop: "auto",
+          marginBottom: "auto",
         }}
-        variants={{
-          hidden: { opacity: 0, y: 200 },
-          visible: {
-            opacity: [0, 1],
-            y: 280,
+        sx={{
+          letterSpacing: {
+            xs: "0.3ch",
+            lg: "1.5ch",
           },
+          lineHeight: "4ch",
         }}
-        animate={mainControls}
-        transition={{ duration: 1.5 }}
-        style={{ backdropFilter: "blur(10px)" }}
       >
-        <Stack
-          className={style.container}
-          style={{
-            placeContent: "center",
+        YOU CAN CONTACT ME AT
+      </Typography>
+      <Stack style={{ height: "50%" }}>
+        <motion.div
+          ref={contactRef}
+          initial={{
+            opacity: 0,
           }}
-          direction="column"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: [0, 1],
+            },
+          }}
+          animate={mainControls}
+          transition={{ duration: 1.5 }}
+          style={{
+            backdropFilter: "blur(10px)",
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginBottom: "auto",
+            padding: "1ch",
+            width: "100%",
+          }}
         >
           <Stack
-            className={`${style.mailId} ${style.introParagraphs}`}
-            direction="row"
-            style={{ margin: "auto", alignItems: "center" }}
+            className={style.container}
+            style={{
+              placeContent: "center",
+            }}
+            direction="column"
           >
-            <AiOutlineMail
-              className={style.mailIcon}
-              style={{
-                color: theme == "light" ? "black" : "white",
-                fontWeight: "600",
-              }}
-            />{" "}
-            <Typography
-              variant="body2"
-              style={{
-                color: "black",
-                // color: theme == "light" ? "black" : "white",
-                fontWeight: "600",
-              }}
-              sx={{
-                fontSize: {
-                  xs: "0.9rem",
-                  lg: "1.1rem",
-                },
-              }}
+            <Stack
+              className={`${style.mailId} ${style.introParagraphs}`}
+              direction="row"
+              style={{ margin: "auto", alignItems: "center" }}
             >
-              yashwanthsrinivaswebdev@gmail.com
-            </Typography>
+              <AiOutlineMail
+                className={style.mailIcon}
+                style={{
+                  color: theme == "light" ? "black" : "white",
+                  fontWeight: "600",
+                }}
+              />{" "}
+              <Typography
+                variant="body2"
+                style={{
+                  fontFamily: "monospace",
+                  color: "black",
+                  // color: "teal",
+                  // color: theme == "light" ? "black" : "white",
+                  fontWeight: "600",
+                }}
+                sx={{
+                  fontSize: {
+                    xs: "0.9rem",
+                    lg: "1.1rem",
+                  },
+                }}
+              >
+                yashwanthsrinivaswebdev@gmail.com
+              </Typography>
+            </Stack>
           </Stack>
-        </Stack>
-      </motion.div>
+        </motion.div>
+      </Stack>
     </Stack>
   );
 }

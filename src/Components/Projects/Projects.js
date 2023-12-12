@@ -35,7 +35,9 @@ function Projects(props) {
   return (
     <Stack
       // ref={projectsRef}
+      direction="column"
       sx={{
+        display: "flex",
         backgroundImage: {
           // xs: `url(${planton_mobile})`,
           xs: `url(${intro_mobile_1})`,
@@ -43,6 +45,8 @@ function Projects(props) {
         },
       }}
       style={{
+        // outline: "2px red solid",
+        justifyContent: "space-around",
         height: "100vh",
         scrollSnapAlign: "end",
         scrollSnapStop: "always",
@@ -56,35 +60,26 @@ function Projects(props) {
       }}
     >
       <Typography
+        className={style.pageTitle}
         variant="h5"
         style={{
+          color: "black",
           fontFamily: "monospace",
-          width: "100%",
           textAlign: "center",
           fontWeight: "800",
-
-          // color:
-          //   props.theme === "light"
-          //     ? // ? "rgb(67, 61, 61)"
-          //       "rgba(0, 0, 0,0.5)"
-          //     : "rgb(255, 255, 230)",
-          // backgroundColor: props.theme === "light" ? "white" : "#8c999a",
-          // borderRadius: "0ch 0ch 50% 50%",
-          // width: "min-content",
-          color:
-            props.theme === "light"
-              ? // ? "rgb(67, 61, 61)"
-                "rgb(255, 255, 230)"
-              : "rgba(0, 0, 0,0.5)",
-          backgroundColor:
-            props.theme === "light" ? "rgba(0,0,0,0.8)" : "white",
-          // borderRadius: "0ch 0ch 50% 50%",
+          marginTop: "auto",
+          marginBottom: "auto",
           width: "100%",
           placeSelf: "center",
-          // padding: "1ch",
+        }}
+        sx={{
+          letterSpacing: {
+            xs: "0.6ch",
+            lg: "1.5ch",
+          },
         }}
       >
-        MY HOBBY PROJECTS
+        MY RECENT WORK
       </Typography>
       <motion.div
         variants={{
@@ -98,7 +93,8 @@ function Projects(props) {
           display: "flex",
           placeContent: "center",
           placeItems: "center",
-          height: "100%",
+          minHeight: "80%",
+          marginBottom: "auto",
           // marginBottom: "10ch",
         }}
       >
@@ -165,7 +161,8 @@ function Projects(props) {
               <div className={style.projectDetailsContainer}>
                 <span className={style.title}>Veganism chat bot</span>
                 <span className={style.description}>
-                  A bot whose only goal is to make you go vegan
+                  Created dynamic vegan chatbot, fostering plant-based lifestyle
+                  advocacy through conversation
                 </span>
               </div>
             </a>

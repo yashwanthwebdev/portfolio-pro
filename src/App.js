@@ -34,7 +34,7 @@ function App() {
       className={style.container}
       style={{
         height: "100vh",
-        scrollSnapAlign: "end",
+        scrollSnapAlign: "start",
         scrollSnapStop: "always",
         backgroundSize: "cover",
         // outline: "2px red solid",

@@ -9,6 +9,10 @@
   transition: transform ease-in-out 0.2s;
 }
 
+.pageTitle {
+  color: teal;
+  color: black;
+}
 .projectContainer:hover {
   transform: scale(1, 1.1);
   filter: saturate(70%);
@@ -55,9 +59,18 @@
   /* color: rgb(0, 0, 0, 0.7); */
   color: rgb(255, 255, 255, 0.5);
   font-weight: 500;
+  /* text-overflow: ellipsis; */
+  text-overflow: ellipsis;
+}
+
+.pageTitle {
+  letter-spacing: 1.5ch;
 }
 
 @media only screen and (max-width: 560px) {
+  .pageTitle {
+    letter-spacing: 0ch;
+  }
   .container {
     /* background-color:aqua; */
     max-width: 100vw;
@@ -99,6 +112,7 @@
     border-radius: 2ch;
     /* overflow: hidden; */
     max-width: 70ch;
+
     /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
   }
 
@@ -121,9 +135,10 @@
 
     place-items: center;
     place-content: center;
-    min-height: min-content;
+    min-height: max-content;
     gap: 3%;
     border-radius: 1ch;
     color: white;
+    /* max-height: 10ch; */
   }
 }

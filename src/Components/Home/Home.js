@@ -18,8 +18,8 @@ function Home(props) {
     // <div className={style.container}>
     <Stack style={{ width: "100vw" }}>
       <Intro theme={props.theme} />
-      <Skills theme={props.theme} />
       <Projects theme={props.theme} />
+      <Skills theme={props.theme} />
       <Contact theme={props.theme} />
       {/* <p
         className={style.intro}

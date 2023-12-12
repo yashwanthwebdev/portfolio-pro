@@ -4,7 +4,8 @@ import style from "./Skills.module.css";
 import { Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import plantsAndLeaves from "../../Images/portfolio/pensAndLeaves.jpg";
-import plants_3 from "../../Images/portfolio/plants_3.jpg";
+// import plants_3 from "../../Images/portfolio/plants_3.jpg";
+import plants_3 from "../../Images/portfolio/intro_mobile_7.jpg";
 import intro_mobile_1 from "../../Images/portfolio/intro_mobile_2.jpg";
 
 function Skills(props) {
@@ -41,8 +42,13 @@ function Skills(props) {
 
   return (
     <Stack
+      direction="column"
       style={{
+        display: "flex",
+
+        flexDirection: "column",
         height: "100vh",
+        justifyContent: "space-around",
         scrollSnapAlign: "start",
         scrollSnapStop: "always",
         // background: props.theme == "light" ? "white" : "black",
@@ -50,6 +56,7 @@ function Skills(props) {
         backgroundSize: "cover",
       }}
       sx={{
+        // outline: "2px red solid",
         backgroundImage: {
           // xs: `url(${abstract_mobile})`,
           // xs: `url(${hanging_flowers_mobile})`,
@@ -61,22 +68,23 @@ function Skills(props) {
       <Typography
         variant="h5"
         style={{
+          color: "black",
           fontFamily: "monospace",
           width: "100%",
           textAlign: "center",
           fontWeight: "800",
-          color:
-            props.theme === "light"
-              ? // ? "rgb(67, 61, 61)"
-                "rgb(255, 255, 230)"
-              : "rgba(0, 0, 0,0.5)",
-          backgroundColor:
-            props.theme === "light" ? "rgba(0,0,0,0.8)" : "white",
-          width: "100%",
           placeSelf: "center",
+          marginTop: "auto",
+        }}
+        sx={{
+          letterSpacing: {
+            xs: "0.6ch",
+            lg: "1.5ch",
+          },
+          lineHeight: "4ch",
         }}
       >
-        MY SKILLS
+        THESE ARE FEW OF MY SKILLS
       </Typography>
       <motion.div
         className={style.motionContainer}
@@ -97,8 +105,15 @@ function Skills(props) {
           flexDirection: "column",
           justifyContent: "center",
           // outline: "2px red solid",
-          margin: "auto",
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginBottom: "auto",
+          marginTop: "auto",
           padding: "1ch",
+          minHeight: "40%",
+          // backgroundColor: "black",
+          color: "beige",
+
           // background: "#DAD299",
           // background: "-webkit-linear-gradient(to right, #B0DAB9, #DAD299)",
           // background: "linear-gradient(to right, #B0DAB9, #DAD299)",
@@ -119,9 +134,8 @@ function Skills(props) {
           direction="row"
           className={style.skillsContainer}
           sx={{
-            justifyContent: "space-between",
             columnGap: {
-              lg: "5ch",
+              lg: "10ch",
             },
             rowGap: {
               lg: "5ch",
@@ -135,7 +149,7 @@ function Skills(props) {
               className={`
                 ${style.eachSkill}
                 {props.theme === "dark" ? style.skillDark : style.skillLight} `}
-              style={{ textAlign: "center" }}
+              // style={{ textAlign: "center" }}
             >
               {element}
             </Typography>
