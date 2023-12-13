@@ -154,10 +154,13 @@ function Contact(props) {
                   // color: theme == "light" ? "black" : "white",
                   // fontWeight: "600",
                   fontFamily: "'Bebas Neue', sans-serif",
-                  letterSpacing: "0.5ch",
                   color: "teal",
                 }}
                 sx={{
+                  letterSpacing: {
+                    xs: "0ch",
+                    lg: "0.5ch",
+                  },
                   fontSize: {
                     xs: "0.9rem",
                     lg: "1.1rem",
