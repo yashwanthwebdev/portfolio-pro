@@ -66,7 +66,8 @@ function Contact(props) {
           placeSelf: "center",
           marginTop: "auto",
           marginBottom: "auto",
-          fontFamily: "'Charmonman', cursive",
+          // fontFamily: "'Charmonman', cursive",
+          fontFamily: "'Oswald', sans-serif",
         }}
       >
         <Typography
@@ -79,7 +80,7 @@ function Contact(props) {
             placeSelf: "center",
             marginTop: "auto",
             marginBottom: "auto",
-            fontFamily: "'Charmonman', cursive",
+            fontFamily: "'Oswald', sans-serif",
           }}
           sx={{
             letterSpacing: {
@@ -140,7 +141,8 @@ function Contact(props) {
               <AiOutlineMail
                 className={style.mailIcon}
                 style={{
-                  color: theme == "light" ? "black" : "white",
+                  // color: "teal",
+                  color: "black",
                   fontWeight: "600",
                 }}
               />{" "}
@@ -148,12 +150,12 @@ function Contact(props) {
                 variant="body2"
                 style={{
                   fontFamily: "monospace",
-                  color: "black",
                   // color: "teal",
                   // color: theme == "light" ? "black" : "white",
                   // fontWeight: "600",
                   fontFamily: "'Bebas Neue', sans-serif",
                   letterSpacing: "0.5ch",
+                  color: "teal",
                 }}
                 sx={{
                   fontSize: {

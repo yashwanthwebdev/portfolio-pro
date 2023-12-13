@@ -90,13 +90,14 @@ function Projects(props) {
           variant="h5"
           style={{
             color: "black",
-            fontFamily: "monospace",
+            // fontFamily: "monospace",
             textAlign: "center",
             fontWeight: "800",
             marginTop: "auto",
             width: "100%",
             placeSelf: "center",
-            fontFamily: "'Charmonman', cursive",
+            // fontFamily: "'Charmonman', cursive",
+            fontFamily: "'Oswald', sans-serif",
           }}
           sx={{
             marginBottom: {

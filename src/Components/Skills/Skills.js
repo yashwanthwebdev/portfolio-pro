@@ -84,12 +84,13 @@ function Skills(props) {
         transition={{ delay: 0.5, duration: 1.5, ease: "anticipate" }}
         style={{
           color: "black",
-          fontFamily: "monospace",
+          // fontFamily: "monospace",
           textAlign: "center",
           fontWeight: "800",
           placeSelf: "center",
           marginTop: "auto",
-          fontFamily: "'Charmonman', cursive",
+          // fontFamily: "'Charmonman', cursive",
+          fontFamily: "'Oswald', sans-serif",
         }}
       >
         <Typography
@@ -101,7 +102,7 @@ function Skills(props) {
             fontWeight: "800",
             placeSelf: "center",
             marginTop: "auto",
-            fontFamily: "'Charmonman', cursive",
+            fontFamily: "'Oswald', sans-serif",
           }}
           sx={{
             letterSpacing: {

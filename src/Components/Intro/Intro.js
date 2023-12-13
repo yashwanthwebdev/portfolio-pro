@@ -98,7 +98,9 @@ function Intro(props) {
                   marginTop: "auto",
                   width: "100%",
                   placeSelf: "center",
-                  fontFamily: "'Charmonman', cursive",
+                  // fontFamily: "'Charmonman', cursive",
+                  // fontFamily: "'Bebas Neue', sans-serif",
+                  fontFamily: "'Oswald', sans-serif",
                 }}
                 sx={{
                   marginBottom: {
