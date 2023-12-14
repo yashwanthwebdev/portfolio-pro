@@ -66,6 +66,7 @@
 
 .pageTitle {
   letter-spacing: 1.5ch;
+  color: black;
 }
 
 @media only screen and (max-width: 560px) {
