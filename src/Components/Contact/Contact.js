@@ -125,7 +125,6 @@ function Contact(props) {
             marginLeft: "auto",
             marginRight: "auto",
             marginBottom: "auto",
-            padding: "1ch",
             width: "100%",
           }}
         >
