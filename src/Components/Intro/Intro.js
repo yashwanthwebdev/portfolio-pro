@@ -81,7 +81,11 @@ function Intro(props) {
                 },
               }}
               animate={mainControls}
-              transition={{ delay: 0.5, duration: 1.5, ease: "anticipate" }}
+              transition={{
+                // delay: 0.5,
+                duration: 1.5,
+                ease: "anticipate",
+              }}
               // transition={{ delay: 0.75, duration: 1, ease: "easeInOut" }}
               style={{
                 placeContent: "center",
@@ -133,7 +137,7 @@ function Intro(props) {
                 },
               }}
               animate={mainControls}
-              transition={{ delay: 2, duration: 2, ease: "easeInOut" }}
+              transition={{ delay: 1.5, duration: 2, ease: "easeInOut" }}
               style={{
                 // marginTop: "auto",
                 placeContent: "center",
@@ -182,7 +186,7 @@ function Intro(props) {
                 },
               }}
               animate={mainControls}
-              transition={{ delay: 4, duration: 2, ease: "easeInOut" }}
+              transition={{ delay: 3, duration: 2, ease: "easeInOut" }}
               style={{
                 placeContent: "center",
                 placeItems: "center",

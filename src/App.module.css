@@ -46,16 +46,6 @@
 }
 
 .buttonLight {
-  /* background-color: rgb(245, 244, 244);
-  color: rgb(7, 7, 7);
-  margin: 0;
-  padding-left: 0.4ch;
-  padding-right: 0.4ch;
-  width: min-content;
-  height: min-content;
-  border-radius: 0.5ch;
-  outline: none;
-  cursor: pointer; */
   transition: transform ease-in-out 1s;
 }
 
@@ -65,16 +55,6 @@
 }
 
 .buttonDark {
-  /* background-color: black;
-  color: white;
-  margin: 0;
-  padding-left: 0.4ch;
-  padding-right: 0.4ch;
-  width: min-content;
-  height: min-content;
-  border-radius: 0.5ch;
-  outline: none; */
-  /* cursor: pointer; */
   transition: transform ease-in-out 1s;
 }
 

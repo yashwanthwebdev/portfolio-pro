@@ -21,6 +21,7 @@ function Projects(props) {
   // const [theme] = useOutletContext();
   const projectsRef = useRef(null);
   const isInView = useInView(projectsRef, { once: false });
+
   const mainControls = useAnimation();
   const projectContainerBackgroundColor = "rgba(0,0,0,0.7)";
 
@@ -83,7 +84,11 @@ function Projects(props) {
           placeSelf: "center",
         }}
         animate={mainControls}
-        transition={{ delay: 0.5, duration: 1.5, ease: "anticipate" }}
+        transition={{
+          // delay: 0.5,
+          duration: 1.5,
+          ease: "anticipate",
+        }}
       >
         <Typography
           className={style.pageTitle}
@@ -116,12 +121,12 @@ function Projects(props) {
       <motion.div
         variants={{
           hidden: { opacity: 0 },
-          visible: { opacity: 1 },
+          visible: { opacity: [0, 1] },
         }}
         initial={{ opacity: 0 }}
         animate={mainControls}
         transition={{
-          delay: 2,
+          delay: 1,
           duration: 2,
           ease: "easeInOut",
         }}
@@ -385,7 +390,7 @@ function Projects(props) {
             </a>
           </Grid>
         </Grid>
-        {/* <div ref={projectsRef}></div> */}
+        {/* <div ref={projectsRef}>hello</div> */}
       </motion.div>
     </Stack>
   );

@@ -81,7 +81,11 @@ function Skills(props) {
         }}
         animate={mainControls}
         // transition={{ delay: 0.5, duration: 1, ease: "anticipate" }}
-        transition={{ delay: 0.5, duration: 1.5, ease: "anticipate" }}
+        transition={{
+          // delay: 0.5,
+          duration: 1.5,
+          ease: "anticipate",
+        }}
         style={{
           color: "black",
           // fontFamily: "monospace",
@@ -131,7 +135,7 @@ function Skills(props) {
         animate={mainControls}
         initial={{ opacity: 0 }}
         transition={{
-          delay: 2,
+          delay: 1,
           duration: 2,
           ease: "easeInOut",
         }}
