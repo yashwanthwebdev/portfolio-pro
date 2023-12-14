@@ -141,21 +141,9 @@ function Projects(props) {
       >
         <Grid
           container
-          // style={{ width: "100%", margin: "auto" }}
-          // spacing={3}
           rowSpacing={1}
-          // columnSpacing={10}
-          sx={
-            {
-              // backdropFilter: {
-              //   xs: "blur(10px)",
-              //   lg: "none",
-              // },
-            }
-          }
+          sx={{}}
           style={{
-            // backdropFilter: " blur(10px)",
-
             marginTop: "0ch",
             height: "100%",
             // padding: "20ch",
@@ -178,7 +166,6 @@ function Projects(props) {
               maxHeight: "30ch",
             }}
           >
-            {/* <a  href="https://football-stats-d45ae.web.app/"  */}
             <a
               href="https://veganism-chat-bot.vercel.app/"
               className={style.hrefContainer}

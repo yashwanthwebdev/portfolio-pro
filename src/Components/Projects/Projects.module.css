@@ -44,7 +44,7 @@
 .projectThumbnail {
   width: 20ch;
   height: 20ch;
-  /* border-radius: 1ch; */
+  border-radius: 1ch;
   /* outline:solid; */
   place-self: center;
   align-self: center;
