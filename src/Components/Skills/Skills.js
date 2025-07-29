@@ -23,7 +23,6 @@ function Skills(props) {
     "React",
     "Redux",
     "RTK query",
-    "Styled components",
     "SASS",
     "Jenkins",
     "Docker",
@@ -32,12 +31,7 @@ function Skills(props) {
     "Typescript",
     "MaterialUI",
     "CSS",
-    "Tailwind",
-    "HTML",
     "GitHub",
-    "Firebase",
-    "Python",
-    "SQL",
   ];
 
   return (
