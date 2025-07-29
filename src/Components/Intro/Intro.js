@@ -138,50 +138,7 @@ function Intro(props) {
                 experiences.
               </Typography>
             </div>
-            <div
-              className={style.introParaContainer}
 
-
-              style={{
-                placeContent: "center",
-                placeItems: "center",
-                backdropFilter: "blur(10px)",
-              }}
-            >
-              <Typography
-                className={style.introParagraphs}
-                sx={{
-                  fontFamily:
-                    props.theme == "light"
-                      ? "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
-                      : "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
-                  lineHeight: "3ch",
-                  fontFamily: "monospace",
-                  margin: "auto",
-                  textAlign: "center",
-                  padding: "0ch 1ch 0ch 1ch",
-                  fontSize: {
-                    xs: "1rem",
-                    lg: "1.4rem",
-                  },
-                  // wordSpacing: "1.5ch",
-                }}
-                style={{}}
-              >
-                With a{" "}
-                <Box sx={{ fontWeight: 800 }} component="span" f>
-                  keen eye for design
-                </Box>{" "}
-                and a knack for coding, I specialize in creating{" "}
-                <Box component="span" sx={{ fontWeight: 800 }}>
-                  user-friendly, responsive
-                </Box>{" "}
-                websites that seamlessly blend{" "}
-                <Box component="span" sx={{ fontWeight: 800 }}>
-                  functionality and aesthetics.
-                </Box>
-              </Typography>
-            </div>
           </Stack>
         </div>
         <div ref={introRef}> </div>
